@@ -1,0 +1,26 @@
+{
+    "perfil_riesgo": "medio",
+    "ahorro_disponible": 350000,
+    "portafolio_seleccionado": [
+        {
+            "id": "F10",
+            "tipo": "fondos",
+            "tasa": 0.152,
+            "minimo": 100000
+        },
+        {
+            "id": "F8",
+            "tipo": "fondos",
+            "tasa": 0.15,
+            "minimo": 120000
+        },
+        {
+            "id": "F9",
+            "tipo": "fondos",
+            "tasa": 0.148,
+            "minimo": 90000
+        }
+    ],
+    "capital_invertido": 310000,
+    "capital_restante": 40000
+}
