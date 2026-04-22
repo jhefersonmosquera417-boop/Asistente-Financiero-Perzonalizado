@@ -2,42 +2,6 @@ import random
 import copy
 from collections import Counter
 
-# ==========================================================
-#   ASISTENTE FINANCIERO PERSONALIZADO - COLOMBIA
-#   MÓDULO 4: HEURÍSTICA EVOLUTIVA (ALGORITMO GENÉTICO)
-# ==========================================================
-#
-#   FLUJO COMPLETO DEL PROYECTO:
-#
-#   [1] asistentefinancierodataset.py
-#       └── Genera dataset_finanzas_colombia.jsonl
-#           (500 ejemplos: salario + riesgo → portafolio)
-#
-#   [2] asistentefinacierofiltro.py
-#       └── Llama 3.2 lee el dataset y produce PERFIL JSON (80%)
-#           con distribución 50/30/20 y portafolio base.
-#
-#   [3] asistentefinancieroheuristica.py
-#       └── Heurística PLANA (reglas fijas R1-R3):
-#           - Filtra catálogo por perfil de riesgo
-#           - Aplica heurística voraz (mayor tasa disponible)
-#           - Primera respuesta condicionada por reglas → 80%
-#
-#   [4] asistentefinancieroevolutivo.py   ← ESTE SCRIPT
-#       └── Heurística EVOLUTIVA (Algoritmo Genético):
-#           - Recibe el perfil JSON del paso [2]
-#           - Evoluciona población de portafolios N generaciones
-#           - Fitness: maximiza rendimiento respetando restricciones
-#           - Portafolio ÓPTIMO → 100%
-#
-# ==========================================================
-
-
-# ==========================================================
-# 1. DATOS DE ENTRADA  ← "El Entorno / Condiciones de Supervivencia"
-#    (En producción este dict viene del paso [2] - asistentefinacierofiltro.py)
-# ==========================================================
-
 perfil_usuario = {
     "salario":           1750000,
     "nivel_riesgo":      "Medio",
@@ -58,15 +22,12 @@ perfil_usuario = {
 
     # Restricciones duras
     "max_activos_riesgosos": 10,     # % máximo en cripto+emprendimientos si salario < 2 SMMLV
-    "smmlv":               1750905,  # Salario mínimo Colombia 2024
+    "smmlv":               1750905,  # Salario mínimo Colombia 2026
     "fondo_emergencia_meses": 3,
 }
 
 
-# ==========================================================
-# 2. CATÁLOGO DE INVERSIONES  ← "Los Genes disponibles"
-#    (Mismo catálogo de asistentefinancieroheuristica.py)
-# ==========================================================
+
 
 catalogo_inversiones = {
     "cdt": [
@@ -142,11 +103,7 @@ catalogo_inversiones = {
 }
 
 
-# ==========================================================
-# 2.1 PURGA GENÉTICA INICIAL
-#     Elimina activos que violan el perfil de riesgo del usuario.
-#     Idéntico al filtrar_catalogo() del ejemplo del profesor.
-# ==========================================================
+
 
 def filtrar_catalogo_por_riesgo(catalogo, nivel_riesgo):
     """
@@ -179,18 +136,14 @@ catalogo_seguro = filtrar_catalogo_por_riesgo(
 )
 
 
-# ==========================================================
-# 3. PARÁMETROS DEL ALGORITMO GENÉTICO
-# ==========================================================
+
 
 TAMANO_POBLACION = 100   # Portafolios compitiendo en cada generación
 GENERACIONES     = 150   # Ciclos de evolución
 TASA_MUTACION    = 0.15  # 15% de probabilidad de mutación
 
 
-# ==========================================================
-# 4. FUNCIONES CENTRALES DEL ALGORITMO GENÉTICO
-# ==========================================================
+
 
 def crear_individuo():
     """
@@ -238,11 +191,7 @@ def _normalizar_porcentajes(individuo):
     )
 
 
-# ----------------------------------------------------------
-# FUNCIÓN DE FITNESS ← "El Juez"
-# Igual en estructura al evaluar_aptitud() del profesor:
-# acumula penalizaciones → aptitud = constante / (1 + error)
-# ----------------------------------------------------------
+
 
 def evaluar_aptitud(individuo, perfil):
     """
@@ -312,9 +261,7 @@ def evaluar_aptitud(individuo, perfil):
     return aptitud, stats
 
 
-# ----------------------------------------------------------
-# SELECCIÓN, CRUCE Y MUTACIÓN
-# ----------------------------------------------------------
+
 
 def seleccion_torneo(poblacion):
     """
@@ -380,9 +327,7 @@ def mutar(individuo):
     return individuo
 
 
-# ==========================================================
-# 5. BUCLE PRINCIPAL  ← "Motor de Evolución"
-# ==========================================================
+
 
 def main():
     print("=" * 62)
@@ -452,9 +397,7 @@ def main():
 
         poblacion = nueva_poblacion
 
-    # ==========================================================
-    # 6. RESULTADOS FINALES  ← "El ADN del Rey"
-    # ==========================================================
+ 
 
     ahorro = perfil_usuario["ahorro_inversion"]
 
