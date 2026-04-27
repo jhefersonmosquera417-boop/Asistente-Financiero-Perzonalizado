@@ -1,14 +1,35 @@
 import json
 
-# Cargar catálogo de inversiones desde el archivo JSONL
+# ==========================================================
+# 1. NORMALIZACIÓN DE CATEGORÍAS
+# ==========================================================
+
+def normalizar_categoria(cat):
+    mapa = {
+        "fondos": "fondos_inversion",
+        "criptomoneda": "criptomonedas"
+    }
+    return mapa.get(cat, cat)
+
+# ==========================================================
+# 2. CARGAR CATÁLOGO
+# ==========================================================
+
 catalogo_inversiones = {}
+
 with open("dataset_catalogo_inversiones.jsonl", "r", encoding="utf-8") as f:
     for line in f:
         item = json.loads(line.strip())
-        categoria = item.pop('categoria')
+        categoria = normalizar_categoria(item.pop('categoria'))
+
         if categoria not in catalogo_inversiones:
             catalogo_inversiones[categoria] = []
+
         catalogo_inversiones[categoria].append(item)
+
+# ==========================================================
+# 3. PORTAFOLIO BASE
+# ==========================================================
 
 PORTAFOLIO_GENERADO = {
   "distribucion_mensual": {
@@ -19,10 +40,7 @@ PORTAFOLIO_GENERADO = {
   "estrategia": "Priorizar la compra de una casa",
   "portafolio": {
     "inversiones": [
-      {
-        "tipo": "casa",
-        "valor": 300000
-      }
+      {"tipo": "casa", "valor": 300000}
     ]
   },
   "ahorro_detallado": {
@@ -31,14 +49,7 @@ PORTAFOLIO_GENERADO = {
     "ahorro_vivienda": 140000,
     "inversion": 52500
   },
-  "portafolio_inversion": {
-    "cdt": 21000,
-    "fondos_inversion": 15750,
-    "acciones": 10500,
-    "bonos": 0,
-    "criptomonedas": 0,
-    "oro": 5250
-  },
+  "portafolio_inversion": {},
   "proyeccion_12_meses": {
     "ahorro_total": 4200000
   },
@@ -46,11 +57,11 @@ PORTAFOLIO_GENERADO = {
 }
 
 # ==========================================================
-# 3. NORMALIZACIÓN SEMÁNTICA DE RIESGO
+# 4. INTERPRETAR RIESGO
 # ==========================================================
 
-def interpretar_riesgo(texto_estrategia):
-    texto = texto_estrategia.lower()
+def interpretar_riesgo(texto):
+    texto = texto.lower()
 
     if "conservador" in texto:
         return "bajo"
@@ -58,102 +69,119 @@ def interpretar_riesgo(texto_estrategia):
         return "medio"
     elif "agresivo" in texto or "alto" in texto:
         return "alto"
-    else:
-        return "medio"
+    return "medio"
 
 # ==========================================================
-# 4. FILTRO POR RIESGO
+# 5. FILTRO POR RIESGO
 # ==========================================================
 
-def filtrar_por_riesgo(catalogo, riesgo_maximo):
+def filtrar_por_riesgo(catalogo, riesgo):
     niveles = {"bajo": 1, "medio": 2, "alto": 3}
 
-    if riesgo_maximo not in niveles:
-        print(f"Perfil de riesgo desconocido: {riesgo_maximo}. Usando 'medio'.")
-        riesgo_maximo = "medio"
-
-    catalogo_filtrado = {}
-
-    for categoria, productos in catalogo.items():
-        catalogo_filtrado[categoria] = [
-            p for p in productos
-            if niveles[p["riesgo"]] <= niveles[riesgo_maximo]
-        ]
-
-    return catalogo_filtrado
+    return {
+        cat: [p for p in prods if niveles[p["riesgo"]] <= niveles[riesgo]]
+        for cat, prods in catalogo.items()
+    }
 
 # ==========================================================
-# 5. HEURÍSTICA VORAZ
+# 6. HEURÍSTICA FINAL (ADAPTATIVA)
 # ==========================================================
 
-def generar_portafolio_voraz(catalogo_filtrado, presupuesto):
-    inversiones = []
-    dinero_restante = presupuesto
+def generar_portafolio_mejorado(catalogo, presupuesto, riesgo):
 
-    todos = []
-    for productos in catalogo_filtrado.values():
-        todos.extend(productos)
+    distribucion = {
+        "bajo": {"cdt": 0.5, "fondos_inversion": 0.3, "bonos": 0.2},
+        "medio": {"cdt": 0.3, "fondos_inversion": 0.3, "acciones": 0.2, "bonos": 0.1, "oro": 0.1},
+        "alto": {"acciones": 0.4, "fondos_inversion": 0.3, "criptomonedas": 0.2, "oro": 0.1}
+    }
 
-    todos = sorted(todos, key=lambda x: x["tasa"], reverse=True)
+    plan = distribucion[riesgo]
 
-    for producto in todos:
-        if dinero_restante >= producto["minimo"]:
-            inversiones.append(producto)
-            dinero_restante -= producto["minimo"]
+    # 🔥 1. SOLO CATEGORÍAS DISPONIBLES
+    disponibles = {
+        cat: peso for cat, peso in plan.items()
+        if cat in catalogo and len(catalogo[cat]) > 0
+    }
 
-    return inversiones, dinero_restante
+    # 🔥 2. NORMALIZAR PESOS
+    total = sum(disponibles.values())
+    disponibles = {cat: peso / total for cat, peso in disponibles.items()}
+
+    portafolio = {
+        "cdt": 0,
+        "fondos_inversion": 0,
+        "acciones": 0,
+        "bonos": 0,
+        "criptomonedas": 0,
+        "oro": 0
+    }
+
+    restante = presupuesto
+
+    # 🔥 3. ASIGNACIÓN INTELIGENTE
+    for categoria, porcentaje in disponibles.items():
+        capital = presupuesto * porcentaje
+        productos = sorted(catalogo[categoria], key=lambda x: x["tasa"], reverse=True)
+
+        for p in productos:
+            if capital >= p["minimo"]:
+                portafolio[categoria] += p["minimo"]
+                capital -= p["minimo"]
+                restante -= p["minimo"]
+
+        # usar sobrante
+        if capital > 0 and productos:
+            portafolio[categoria] += capital
+            restante -= capital
+
+    return portafolio, restante
 
 # ==========================================================
-# 6. MAIN
+# 7. MAIN
 # ==========================================================
 
 def main():
-    print("====================================================")
-    print("MOTOR HEURÍSTICO DE OPTIMIZACIÓN FINANCIERA")
-    print("====================================================\n")
+
+    print("==== MOTOR FINANCIERO INTELIGENTE ====\n")
 
     ahorro = PORTAFOLIO_GENERADO["distribucion_mensual"]["ahorro_inversion"]
-
     riesgo = interpretar_riesgo(PORTAFOLIO_GENERADO["estrategia"])
-    print(f"Perfil detectado desde Llama: {riesgo}\n")
 
-    print("1. Filtrando productos según perfil de riesgo...")
+    print(f"Perfil detectado: {riesgo}\n")
+
     catalogo_filtrado = filtrar_por_riesgo(catalogo_inversiones, riesgo)
 
-    print("2. Ejecutando heurística voraz para asignación de capital...\n")
-    inversiones, restante = generar_portafolio_voraz(catalogo_filtrado, ahorro)
+    # DEBUG
+    print("DEBUG PRODUCTOS:")
+    for cat, prods in catalogo_filtrado.items():
+        print(f"{cat}: {len(prods)} productos")
 
-    if inversiones:
-        print("PORTAFOLIO SELECCIONADO:")
-        for inv in inversiones:
-            print(f"{inv['id']} | tasa: {inv['tasa']*100:.2f}% | mínimo: {inv['minimo']}")
+    print("\nGenerando portafolio...\n")
 
-        print("\nRESUMEN")
-        print(f"Capital invertido: {ahorro - restante}")
-        print(f"Capital restante: {restante}")
-    else:
-        print("No se pudo generar portafolio con las restricciones.")
+    portafolio, restante = generar_portafolio_mejorado(
+        catalogo_filtrado,
+        ahorro,
+        riesgo
+    )
 
-    # Guardar resultados en archivo JSON
-    resultados = {
-        "perfil_riesgo": riesgo,
-        "ahorro_disponible": ahorro,
-        "portafolio_seleccionado": [
-            {
-                "id": inv["id"],
-                "tipo": next((cat for cat, prods in catalogo_inversiones.items() if any(p["id"] == inv["id"] for p in prods)), "desconocido"),
-                "tasa": inv["tasa"],
-                "minimo": inv["minimo"]
-            } for inv in inversiones
-        ],
-        "capital_invertido": ahorro - restante,
-        "capital_restante": restante
-    }
+    PORTAFOLIO_GENERADO["portafolio_inversion"] = portafolio
 
-    with open("portafolio_heuristico.json", "w", encoding="utf-8") as f:
-        json.dump(resultados, f, indent=4, ensure_ascii=False)
+    print("PORTAFOLIO FINAL:")
+    for k, v in portafolio.items():
+        print(f"{k}: {int(v)}")
 
-    print("\nResultados guardados en 'portafolio_heuristico.json'.")
+    print("\nRESUMEN")
+    print(f"Invertido: {ahorro - restante}")
+    print(f"Restante: {int(restante)}")
+
+    with open("portafolio_final.json", "w", encoding="utf-8") as f:
+        json.dump(PORTAFOLIO_GENERADO, f, indent=4, ensure_ascii=False)
+
+    print("\nArchivo guardado: portafolio_final.json")
+
+# ==========================================================
+# EJECUCIÓN
+# ==========================================================
 
 if __name__ == "__main__":
     main()
