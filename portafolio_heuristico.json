@@ -1,26 +1,18 @@
 {
-    "perfil_riesgo": "medio",
-    "ahorro_disponible": 350000,
-    "portafolio_seleccionado": [
-        {
-            "id": "F10",
-            "tipo": "fondos",
-            "tasa": 0.152,
-            "minimo": 100000
-        },
-        {
-            "id": "F8",
-            "tipo": "fondos",
-            "tasa": 0.15,
-            "minimo": 120000
-        },
-        {
-            "id": "F9",
-            "tipo": "fondos",
-            "tasa": 0.148,
-            "minimo": 90000
-        }
-    ],
-    "capital_invertido": 310000,
-    "capital_restante": 40000
+  "distribucion_mensual": {
+    "salario": 1750000,
+    "necesidades": 875000,
+    "deseos": 525000,
+    "ahorro_inversion": 350000
+  },
+  "estrategia": "Perfil Medio detectado",
+  "portafolio_inversion": {
+    "cdt": 210000,
+    "fondos_inversion": 105000,
+    "acciones": 35000
+  },
+  "resumen": {
+    "invertido": 350000.0,
+    "restante": 0.0
+  }
 }

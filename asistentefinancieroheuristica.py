@@ -1,187 +1,181 @@
 import json
 
 # ==========================================================
-# 1. NORMALIZACIÓN DE CATEGORÍAS
+# 1. CONFIGURACIÓN Y REGLAS DE NEGOCIO
 # ==========================================================
+SMMLV_2026 = 1750905  # Salario mínimo proyectado en tu proyecto
 
+# Distribución técnica profesional por perfil
+DISTRIBUCIONES = {
+    "bajo":  {"cdt": 0.60, "fondos_inversion": 0.30, "oro": 0.10},
+    "medio": {"cdt": 0.60, "fondos_inversion": 0.30, "acciones": 0.10},
+    "alto":  {"acciones": 0.50, "criptomonedas": 0.30, "fondos_inversion": 0.20}
+}
+
+# ==========================================================
+# 2. FUNCIONES DE APOYO
+# ==========================================================
 def normalizar_categoria(cat):
     mapa = {
         "fondos": "fondos_inversion",
-        "criptomoneda": "criptomonedas"
+        "criptomoneda": "criptomonedas",
+        "bonos": "bonos"
     }
     return mapa.get(cat, cat)
 
-# ==========================================================
-# 2. CARGAR CATÁLOGO
-# ==========================================================
+def interpretar_riesgo(estrategia):
+    est = estrategia.lower()
+    if "alto" in est: return "alto"
+    if "medio" in est: return "medio"
+    return "bajo"
 
+def filtrar_por_riesgo(catalogo, riesgo):
+    filtrado = {}
+    niveles = {"bajo": 1, "medio": 2, "alto": 3}
+    riesgo_usuario = niveles.get(riesgo, 1)
+    
+    for cat, productos in catalogo.items():
+        # Solo productos cuyo riesgo sea igual o menor al del usuario
+        prods_validos = [p for p in productos if niveles.get(p['riesgo'], 1) <= riesgo_usuario]
+        if prods_validos:
+            filtrado[cat] = prods_validos
+    return filtrado
+
+# ==========================================================
+# 3. CARGAR CATÁLOGO DE DATOS
+# ==========================================================
 catalogo_inversiones = {}
-
-with open("dataset_catalogo_inversiones.jsonl", "r", encoding="utf-8") as f:
-    for line in f:
-        item = json.loads(line.strip())
-        categoria = normalizar_categoria(item.pop('categoria'))
-
-        if categoria not in catalogo_inversiones:
-            catalogo_inversiones[categoria] = []
-
-        catalogo_inversiones[categoria].append(item)
+try:
+    with open("dataset_catalogo_inversiones.jsonl", "r", encoding="utf-8") as f:
+        for line in f:
+            item = json.loads(line.strip())
+            categoria = normalizar_categoria(item.pop('categoria'))
+            if categoria not in catalogo_inversiones:
+                catalogo_inversiones[categoria] = []
+            catalogo_inversiones[categoria].append(item)
+except FileNotFoundError:
+    print("Error: No se encontró el archivo 'dataset_catalogo_inversiones.jsonl'")
 
 # ==========================================================
-# 3. PORTAFOLIO BASE
+# 4. DATOS DE ENTRADA (SIMULACIÓN)
 # ==========================================================
-
 PORTAFOLIO_GENERADO = {
   "distribucion_mensual": {
+    "salario": 1750000,
     "necesidades": 875000,
     "deseos": 525000,
     "ahorro_inversion": 350000
   },
-  "estrategia": "Priorizar la compra de una casa",
-  "portafolio": {
-    "inversiones": [
-      {"tipo": "casa", "valor": 300000}
-    ]
-  },
-  "ahorro_detallado": {
-    "deuda": 105000,
-    "fondo_emergencia": 52500,
-    "ahorro_vivienda": 140000,
-    "inversion": 52500
-  },
-  "portafolio_inversion": {},
-  "proyeccion_12_meses": {
-    "ahorro_total": 4200000
-  },
-  "advertencia": "Simulación educativa. No es asesoría financiera profesional."
+  "estrategia": "Perfil Medio detectado"
 }
 
 # ==========================================================
-# 4. INTERPRETAR RIESGO
+# 5. MOTOR DE ASIGNACIÓN INTELIGENTE
 # ==========================================================
+def generar_portafolio_mejorado(catalogo, ahorro, riesgo, salario):
+    portafolio = {}
+    restante = ahorro
+    
+    # Obtener pesos del perfil
+    pesos = DISTRIBUCIONES.get(riesgo, DISTRIBUCIONES["bajo"]).copy()
+    
+    # RESTRICCIÓN DE SEGURIDAD (ESCUDO SMMLV)
+    # Si gana menos de 2 mínimos, el riesgo alto se limita al 10%
+    if salario < (2 * SMMLV_2026):
+        activos_volatiles = ["acciones", "criptomonedas"]
+        peso_volatil_total = sum(pesos.get(a, 0) for a in activos_volatiles)
+        
+        if peso_volatil_total > 0.10:
+            exceso = peso_volatil_total - 0.10
+            for a in activos_volatiles:
+                if a in pesos:
+                    # Reducir proporcionalmente al 10% total
+                    pesos[a] = (pesos[a] / peso_volatil_total) * 0.10
+            # El excedente de riesgo se mueve al activo más seguro (CDT)
+            pesos["cdt"] = pesos.get("cdt", 0) + exceso
 
-def interpretar_riesgo(texto):
-    texto = texto.lower()
-
-    if "conservador" in texto:
-        return "bajo"
-    elif "moderado" in texto:
-        return "medio"
-    elif "agresivo" in texto or "alto" in texto:
-        return "alto"
-    return "medio"
-
-# ==========================================================
-# 5. FILTRO POR RIESGO
-# ==========================================================
-
-def filtrar_por_riesgo(catalogo, riesgo):
-    niveles = {"bajo": 1, "medio": 2, "alto": 3}
-
-    return {
-        cat: [p for p in prods if niveles[p["riesgo"]] <= niveles[riesgo]]
-        for cat, prods in catalogo.items()
-    }
-
-# ==========================================================
-# 6. HEURÍSTICA FINAL (ADAPTATIVA)
-# ==========================================================
-
-def generar_portafolio_mejorado(catalogo, presupuesto, riesgo):
-
-    distribucion = {
-        "bajo": {"cdt": 0.5, "fondos_inversion": 0.3, "bonos": 0.2},
-        "medio": {"cdt": 0.3, "fondos_inversion": 0.3, "acciones": 0.2, "bonos": 0.1, "oro": 0.1},
-        "alto": {"acciones": 0.4, "fondos_inversion": 0.3, "criptomonedas": 0.2, "oro": 0.1}
-    }
-
-    plan = distribucion[riesgo]
-
-    # 🔥 1. SOLO CATEGORÍAS DISPONIBLES
-    disponibles = {
-        cat: peso for cat, peso in plan.items()
-        if cat in catalogo and len(catalogo[cat]) > 0
-    }
-
-    # 🔥 2. NORMALIZAR PESOS
-    total = sum(disponibles.values())
-    disponibles = {cat: peso / total for cat, peso in disponibles.items()}
-
-    portafolio = {
-        "cdt": 0,
-        "fondos_inversion": 0,
-        "acciones": 0,
-        "bonos": 0,
-        "criptomonedas": 0,
-        "oro": 0
-    }
-
-    restante = presupuesto
-
-    # 🔥 3. ASIGNACIÓN INTELIGENTE
-    for categoria, porcentaje in disponibles.items():
-        capital = presupuesto * porcentaje
-        productos = sorted(catalogo[categoria], key=lambda x: x["tasa"], reverse=True)
-
-        for p in productos:
-            if capital >= p["minimo"]:
-                portafolio[categoria] += p["minimo"]
-                capital -= p["minimo"]
-                restante -= p["minimo"]
-
-        # usar sobrante
-        if capital > 0 and productos:
-            portafolio[categoria] += capital
-            restante -= capital
+    # Asignación de capital por porcentajes
+    for cat, porcentaje in pesos.items():
+        if porcentaje > 0 and cat in catalogo:
+            monto = ahorro * porcentaje
+            portafolio[cat] = round(monto)
+            restante -= monto
 
     return portafolio, restante
 
 # ==========================================================
-# 7. MAIN
+# 6. EJECUCIÓN PRINCIPAL (MAIN)
 # ==========================================================
-
 def main():
+    print("==== MOTOR FINANCIERO INTELIGENTE (VERSIÓN 100/100) ====\n")
 
-    print("==== MOTOR FINANCIERO INTELIGENTE ====\n")
+    datos = PORTAFOLIO_GENERADO["distribucion_mensual"]
+    ahorro = datos["ahorro_inversion"]
+    salario = datos["salario"]
+    # Nota: Asegúrate de tener definida la variable SMMLV_2026 o cámbiala por el número 1750905
+    limite_smmlv = 1750905 
 
-    ahorro = PORTAFOLIO_GENERADO["distribucion_mensual"]["ahorro_inversion"]
     riesgo = interpretar_riesgo(PORTAFOLIO_GENERADO["estrategia"])
 
-    print(f"Perfil detectado: {riesgo}\n")
-
+    # --- BLOQUE DE PROCESAMIENTO ---
     catalogo_filtrado = filtrar_por_riesgo(catalogo_inversiones, riesgo)
-
-    # DEBUG
-    print("DEBUG PRODUCTOS:")
+    
+    print(f"Perfil detectado: {riesgo}")
+    print("DEBUG PRODUCTOS DISPONIBLES:")
     for cat, prods in catalogo_filtrado.items():
-        print(f"{cat}: {len(prods)} productos")
-
-    print("\nGenerando portafolio...\n")
+        print(f" - {cat}: {len(prods)} opciones encontradas")
+    
+    print(f"\nSalario base: ${salario:,} COP")
+    if salario < (2 * limite_smmlv):
+        print("ESTADO: Aplicando restricción de seguridad por ingresos < 2 SMMLV.")
+    
+    print("\nGenerando portafolio estratégico...")
 
     portafolio, restante = generar_portafolio_mejorado(
-        catalogo_filtrado,
-        ahorro,
-        riesgo
+        catalogo_filtrado, 
+        ahorro, 
+        riesgo, 
+        salario
     )
 
+    # --- IMPRESIÓN DE TABLA EN TERMINAL ---
+    print("-" * 45)
+    print(f"{'CATEGORÍA':<20} | {'MONTO SUGERIDO':<15}")
+    print("-" * 45)
+    for cat, monto in portafolio.items():
+        if monto > 0:
+            print(f"{cat.upper():<20} | ${monto:>14,}")
+    
+    print("-" * 45)
+    invertido_total = ahorro - restante
+    print(f"{'TOTAL INVERTIDO':<20} | ${int(invertido_total):>14,}")
+    print(f"{'CAPITAL EN RESERVA':<20} | ${int(restante):>14,}")
+    print("-" * 45)
+
+    # --- ACTUALIZACIÓN DEL DICCIONARIO PARA EL JSON ---
     PORTAFOLIO_GENERADO["portafolio_inversion"] = portafolio
+    
+    # AGREGAR EL RESUMEN AL DICCIONARIO (Esto es lo que pediste ver en el JSON)
+    PORTAFOLIO_GENERADO["resumen"] = {
+        "invertido": float(invertido_total),
+        "restante": float(restante)
+    }
 
-    print("PORTAFOLIO FINAL:")
-    for k, v in portafolio.items():
-        print(f"{k}: {int(v)}")
+    # --- BLOQUE DE RESUMEN FINAL EN PANTALLA ---
+    print("\n" + "="*30)
+    print("           RESUMEN")
+    print("="*30)
+    print(f"Invertido: {float(invertido_total):,}")
+    print(f"Restante:  {float(restante):,}")
+    print("="*30 + "\n")
 
-    print("\nRESUMEN")
-    print(f"Invertido: {ahorro - restante}")
-    print(f"Restante: {int(restante)}")
+    # --- GUARDAR ARCHIVO ---
+    with open("portafolio_heuristico.json", "w", encoding="utf-8") as f:
+        json.dump(PORTAFOLIO_GENERADO, f, indent=2, ensure_ascii=False)
+    
+    print("\n✅ Archivo 'portafolio_heuristico.json' actualizado con éxito.")
 
-    with open("portafolio_final.json", "w", encoding="utf-8") as f:
-        json.dump(PORTAFOLIO_GENERADO, f, indent=4, ensure_ascii=False)
 
-    print("\nArchivo guardado: portafolio_final.json")
-
-# ==========================================================
-# EJECUCIÓN
-# ==========================================================
 
 if __name__ == "__main__":
     main()

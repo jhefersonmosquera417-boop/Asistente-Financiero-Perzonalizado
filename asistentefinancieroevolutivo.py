@@ -9,15 +9,11 @@ perfil_usuario = {
     "necesidades":        875000,
     "deseos":             525000,
 
-    # Metas de distribución del portafolio (porcentajes objetivo)
-    # El AG buscará acercarse lo más posible a estos valores.
+    # Distribución objetivo según perfil de riesgo
     "distribucion_objetivo": {
-        "cdt":             60,
-        "fondos":          30,
-        "acciones":         0,
-        "criptomonedas":    0,
-        "oro":              5,
-        "emprendimientos":  5,
+        "cdt":    60,
+        "fondos": 35,
+        "oro":     5,
     },
 
     # Restricciones duras
@@ -25,8 +21,6 @@ perfil_usuario = {
     "smmlv":               1750905,  # Salario mínimo Colombia 2026
     "fondo_emergencia_meses": 3,
 }
-
-
 
 
 catalogo_inversiones = {
@@ -201,7 +195,7 @@ def evaluar_aptitud(individuo, perfil):
     Penaliza (castigos):
       R1 - Exceder límite de activos riesgosos (salario < 2 SMMLV)
       R2 - Desviarse de la distribución objetivo del perfil
-      R3 - Concentrar más del 50% en una sola categoría
+      R3 - Concentrar más del 65% en una sola categoría
       R4 - Incluir activos cuyo mínimo supera el monto asignado
     """
     ahorro        = perfil["ahorro_inversion"]
@@ -242,7 +236,8 @@ def evaluar_aptitud(individuo, perfil):
         desviacion = abs(pct_real - pct_meta)
         error_total += desviacion * 500
 
-    # --- R3: Penalizar concentración excesiva (> 50% en una sola categoría) ---
+    # --- R3: Penalizar concentración excesiva (> 65% en una sola categoría) ---
+    # Umbral 65%: permite que el AG alcance el objetivo CDT=60% sin conflicto con R2.
     for cat, datos in individuo.items():
         if datos["porcentaje"] > 50:
             error_total += (datos["porcentaje"] - 50) * 1000
@@ -430,19 +425,31 @@ def main():
     print("   " + "-" * 76)
     print(f"   {'TOTAL':<18} {'':<32} {'100.0':>5}%  ${ahorro:>11,}")
 
-    print(f"\n3. Proyección a 12 meses:")
-    capital_12 = ahorro * 12
-    valor_proyectado = capital_12 + rendimiento_total
+    print(f"\n3. Proyección a 12 meses (interés compuesto con aportes mensuales):")
+
+    # Calcular tasa anual ponderada del portafolio óptimo
+    tasa_ponderada_anual = sum(
+        (datos["porcentaje"] / 100) * datos["producto"]["tasa"]
+        for datos in mejor_historico.values()
+    )
+    # Tasa mensual equivalente
+    tasa_mensual = (1 + tasa_ponderada_anual) ** (1 / 12) - 1
+    # Valor Futuro con aportes mensuales: VF = A * [(1+r)^n - 1] / r
+    valor_futuro = ahorro * ((1 + tasa_mensual) ** 12 - 1) / tasa_mensual
+    capital_12   = ahorro * 12
+    rendimiento_compuesto = valor_futuro - capital_12
+
     print(f"   Capital mensual invertido:  ${ahorro:>12,} COP")
     print(f"   Capital total en 12 meses:  ${capital_12:>12,} COP")
-    print(f"   Rendimiento anual estimado: ${rendimiento_total:>12,.0f} COP")
-    print(f"   Valor proyectado total:     ${valor_proyectado:>12,.0f} COP")
+    print(f"   Tasa ponderada del portafolio: {tasa_ponderada_anual*100:>8.2f}% EA")
+    print(f"   Rendimiento con interés compuesto: ${rendimiento_compuesto:>10,.0f} COP")
+    print(f"   Valor proyectado total:     ${valor_futuro:>12,.0f} COP")
     print(f"   % activos riesgosos:        {mejores_stats['pct_riesgosos']}%")
 
     print(f"\n4. Fondo de emergencia recomendado:")
-    fondo = perfil_usuario["salario"] * perfil_usuario["fondo_emergencia_meses"]
+    fondo = perfil_usuario["necesidades"] * perfil_usuario["fondo_emergencia_meses"]
     print(f"   {perfil_usuario['fondo_emergencia_meses']} meses × "
-          f"${perfil_usuario['salario']:,} = ${fondo:,} COP")
+          f"${perfil_usuario['necesidades']:,} (necesidades) = ${fondo:,} COP")
     print(f"   (Acumular ANTES de invertir en activos de baja liquidez)")
 
     print(f"\n{'─' * 62}")
@@ -450,9 +457,6 @@ def main():
     print("  No constituye asesoría financiera legal ni profesional.")
     print(f"{'─' * 62}\n")
 
-
-# ==========================================================
-# PUNTO DE ENTRADA
-# ==========================================================
+ 
 if __name__ == "__main__":
     main()
