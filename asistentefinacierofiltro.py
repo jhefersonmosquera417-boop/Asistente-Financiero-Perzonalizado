@@ -195,8 +195,22 @@ def obtener_recomendacion_llm(historial, salario, riesgo, objetivo, deudas):
 def main():
     historial = cargar_contexto_desde_archivo()
 
-    print("\n=== MOTOR FINANCIERO INTELIGENTE ===")
-    print("Todos los cálculos siguen la regla 50/30/20 exacta.\n")
+    print("="*60)
+    print("       SISTEMA INTELIGENTE DE PLANIFICACIÓN FINANCIERA")
+    print("="*60)
+    print("Bienvenido. Este sistema calcula su presupuesto bajo la regla 50/30/20")
+    print("y genera proyecciones de inversión ajustadas al mercado colombiano.")
+    print("-"*60)
+    print("INSTRUCCIONES DE INGRESO:")
+    print("Debe ingresar los datos separados por comas en el siguiente orden:")
+    print("1. Salario mensual (sin puntos ni comas).")
+    print("2. Nivel de riesgo (Bajo, Medio, Alto).")
+    print("3. Valor total de deudas (0 si no tiene).")
+    print("4. Objetivo financiero (Ejemplo: casa, viaje, estudio).")
+    print("-"*60)
+    print("EJEMPLO: 2500000,Medio,500000,casa")
+    print("Para cerrar el programa, escriba: salir")
+    print("="*60 + "\n")
 
     while True:
         entrada = input("salario,riesgo,deudas,objetivo:\n> ").strip()

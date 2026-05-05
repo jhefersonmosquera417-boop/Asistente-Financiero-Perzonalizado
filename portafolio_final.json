@@ -1,54 +1,54 @@
 {
   "distribucion_mensual": {
-    "salario": 1750000,
-    "necesidades_50pct": 875000,
-    "deseos_30pct": 525000,
-    "ahorro_20pct": 350000
+    "salario": 1700000,
+    "necesidades_50pct": 850000,
+    "deseos_30pct": 510000,
+    "ahorro_20pct": 340000
   },
-  "fondo_emergencia_meta": 2625000,
+  "fondo_emergencia_meta": 2550000,
   "ahorro_detallado": {
     "deuda": 0,
-    "fondo_emergencia": 63000,
-    "ahorro_vivienda": 140000,
-    "inversion": 147000,
-    "suma_verificacion": 350000
+    "fondo_emergencia": 61200,
+    "ahorro_vivienda": 136000,
+    "inversion": 142800,
+    "suma_verificacion": 340000
   },
   "portafolio_inversion": {
-    "cdt": 88200,
-    "fondos_inversion": 44100,
-    "acciones": 14700,
+    "cdt": 85680,
+    "fondos_inversion": 42840,
+    "acciones": 14280,
     "bonos": 0,
     "criptomonedas": 0,
     "oro": 0
   },
   "proyeccion_12_meses": {
-    "capital_total_aportado": 4200000,
-    "rendimiento_con_interes": 88645,
-    "valor_futuro_total": 4288645,
+    "capital_total_aportado": 4080000,
+    "rendimiento_con_interes": 86113,
+    "valor_futuro_total": 4166113,
     "detalle_por_instrumento": {
       "cdt": {
-        "aporte_mensual": 88200,
-        "capital_12_meses": 1058400,
-        "rendimiento": 56089,
-        "valor_futuro": 1114489,
+        "aporte_mensual": 85680,
+        "capital_12_meses": 1028160,
+        "rendimiento": 54487,
+        "valor_futuro": 1082647,
         "tasa_anual_ea": "11.8%"
       },
       "fondos_inversion": {
-        "aporte_mensual": 44100,
-        "capital_12_meses": 529200,
-        "rendimiento": 26178,
-        "valor_futuro": 555378,
+        "aporte_mensual": 42840,
+        "capital_12_meses": 514080,
+        "rendimiento": 25430,
+        "valor_futuro": 539510,
         "tasa_anual_ea": "11.0%"
       },
       "acciones": {
-        "aporte_mensual": 14700,
-        "capital_12_meses": 176400,
-        "rendimiento": 6378,
-        "valor_futuro": 182778,
+        "aporte_mensual": 14280,
+        "capital_12_meses": 171360,
+        "rendimiento": 6196,
+        "valor_futuro": 177556,
         "tasa_anual_ea": "8.0%"
       }
     }
   },
   "advertencia": "Simulación educativa. No constituye asesoría financiera legal ni profesional.",
-  "recomendacion_estrategica": "Prioriza inversión en activos financieros con rentabilidad moderada (fondos de pensiones, bonos) y reserva un 20% para la compra de una casa. Invierte en bienes raíces a través de un fondo de inversión en propiedades o un Fondo de Inversión en Vivienda (FIV)."
+  "recomendacion_estrategica": "Invertir en activos financieros con rentabilidad moderada (fondo balanceado o CDT) y priorizar la construcción de un fondo de emergencia para cubrir gastos imprevistos. Invertir una fracción del ingreso mensual en acciones colombianas para diversificar el portafolio y aprovechar oportunidades de crecimiento a largo plazo."
 }
