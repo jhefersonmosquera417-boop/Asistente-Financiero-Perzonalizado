@@ -1,0 +1,500 @@
+{"id": "CDT1", "entidad": "Bancolombia", "tasa": 0.112, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT2", "entidad": "Davivienda", "tasa": 0.11, "riesgo": "bajo", "minimo": 150000, "categoria": "cdt"}
+{"id": "CDT3", "entidad": "BBVA Colombia", "tasa": 0.109, "riesgo": "bajo", "minimo": 200000, "categoria": "cdt"}
+{"id": "CDT4", "entidad": "Banco de Bogotá", "tasa": 0.111, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT5", "entidad": "Banco Popular", "tasa": 0.108, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT6", "entidad": "Banco AV Villas", "tasa": 0.107, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT7", "entidad": "Banco Caja Social", "tasa": 0.113, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT8", "entidad": "Banco Itaú Colombia", "tasa": 0.114, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT9", "entidad": "Scotiabank Colpatria", "tasa": 0.115, "riesgo": "bajo", "minimo": 150000, "categoria": "cdt"}
+{"id": "CDT10", "entidad": "Banco Falabella", "tasa": 0.116, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT11", "entidad": "Bancoomeva", "tasa": 0.109, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT12", "entidad": "Serfinanza", "tasa": 0.118, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT13", "entidad": "Finandina", "tasa": 0.119, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT14", "entidad": "Mibanco", "tasa": 0.117, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT15", "entidad": "Banco W", "tasa": 0.12, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT16", "entidad": "Bancolombia", "tasa": 0.105, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT17", "entidad": "Davivienda", "tasa": 0.103, "riesgo": "bajo", "minimo": 150000, "categoria": "cdt"}
+{"id": "CDT18", "entidad": "BBVA Colombia", "tasa": 0.102, "riesgo": "bajo", "minimo": 200000, "categoria": "cdt"}
+{"id": "CDT19", "entidad": "Banco de Bogotá", "tasa": 0.104, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT20", "entidad": "Banco Popular", "tasa": 0.101, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT21", "entidad": "Banco AV Villas", "tasa": 0.1, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT22", "entidad": "Banco Caja Social", "tasa": 0.106, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT23", "entidad": "Banco Itaú Colombia", "tasa": 0.107, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT24", "entidad": "Scotiabank Colpatria", "tasa": 0.108, "riesgo": "bajo", "minimo": 150000, "categoria": "cdt"}
+{"id": "CDT25", "entidad": "Banco Falabella", "tasa": 0.109, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT26", "entidad": "Bancoomeva", "tasa": 0.102, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT27", "entidad": "Serfinanza", "tasa": 0.111, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT28", "entidad": "Finandina", "tasa": 0.112, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT29", "entidad": "Mibanco", "tasa": 0.11, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT30", "entidad": "Banco W", "tasa": 0.113, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT31", "entidad": "Bancolombia", "tasa": 0.109, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT32", "entidad": "Davivienda", "tasa": 0.107, "riesgo": "bajo", "minimo": 150000, "categoria": "cdt"}
+{"id": "CDT33", "entidad": "BBVA Colombia", "tasa": 0.106, "riesgo": "bajo", "minimo": 200000, "categoria": "cdt"}
+{"id": "CDT34", "entidad": "Banco de Bogotá", "tasa": 0.108, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT35", "entidad": "Banco Popular", "tasa": 0.105, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT36", "entidad": "Banco AV Villas", "tasa": 0.104, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT37", "entidad": "Banco Caja Social", "tasa": 0.11, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT38", "entidad": "Banco Itaú Colombia", "tasa": 0.111, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT39", "entidad": "Scotiabank Colpatria", "tasa": 0.112, "riesgo": "bajo", "minimo": 150000, "categoria": "cdt"}
+{"id": "CDT40", "entidad": "Banco Falabella", "tasa": 0.113, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT41", "entidad": "Bancoomeva", "tasa": 0.106, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT42", "entidad": "Serfinanza", "tasa": 0.115, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT43", "entidad": "Finandina", "tasa": 0.116, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT44", "entidad": "Mibanco", "tasa": 0.114, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT45", "entidad": "Banco W", "tasa": 0.117, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT46", "entidad": "Bancolombia", "tasa": 0.118, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT47", "entidad": "Davivienda", "tasa": 0.116, "riesgo": "bajo", "minimo": 150000, "categoria": "cdt"}
+{"id": "CDT48", "entidad": "BBVA Colombia", "tasa": 0.115, "riesgo": "bajo", "minimo": 200000, "categoria": "cdt"}
+{"id": "CDT49", "entidad": "Banco de Bogotá", "tasa": 0.117, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT50", "entidad": "Banco Popular", "tasa": 0.114, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT51", "entidad": "Banco AV Villas", "tasa": 0.113, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT52", "entidad": "Banco Caja Social", "tasa": 0.119, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT53", "entidad": "Banco Itaú Colombia", "tasa": 0.12, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT54", "entidad": "Scotiabank Colpatria", "tasa": 0.121, "riesgo": "bajo", "minimo": 150000, "categoria": "cdt"}
+{"id": "CDT55", "entidad": "Banco Falabella", "tasa": 0.122, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT56", "entidad": "Bancoomeva", "tasa": 0.115, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT57", "entidad": "Serfinanza", "tasa": 0.124, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT58", "entidad": "Finandina", "tasa": 0.125, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT59", "entidad": "Mibanco", "tasa": 0.123, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT60", "entidad": "Banco W", "tasa": 0.126, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT61", "entidad": "Cotrafa Cooperativa", "tasa": 0.121, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT62", "entidad": "CFA Cooperativa", "tasa": 0.122, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT63", "entidad": "Coofinep", "tasa": 0.123, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT64", "entidad": "Coomeva Cooperativa", "tasa": 0.12, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT65", "entidad": "JFK Cooperativa", "tasa": 0.124, "riesgo": "bajo", "minimo": 30000, "categoria": "cdt"}
+{"id": "CDT66", "entidad": "Confiar Cooperativa", "tasa": 0.125, "riesgo": "bajo", "minimo": 30000, "categoria": "cdt"}
+{"id": "CDT67", "entidad": "Coodesarrollo", "tasa": 0.118, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT68", "entidad": "Coprocenva", "tasa": 0.119, "riesgo": "bajo", "minimo": 30000, "categoria": "cdt"}
+{"id": "CDT69", "entidad": "Contactar", "tasa": 0.117, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT70", "entidad": "Credifamilia", "tasa": 0.116, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT71", "entidad": "Juriscoop", "tasa": 0.122, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT72", "entidad": "Multiactiva Progreso", "tasa": 0.12, "riesgo": "bajo", "minimo": 30000, "categoria": "cdt"}
+{"id": "CDT73", "entidad": "Solidaria Colombia", "tasa": 0.121, "riesgo": "bajo", "minimo": 30000, "categoria": "cdt"}
+{"id": "CDT74", "entidad": "Coopcentral", "tasa": 0.115, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT75", "entidad": "Banco Agrario", "tasa": 0.106, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT76", "entidad": "Bancoldex", "tasa": 0.108, "riesgo": "bajo", "minimo": 200000, "categoria": "cdt"}
+{"id": "CDT77", "entidad": "Findeter", "tasa": 0.107, "riesgo": "bajo", "minimo": 500000, "categoria": "cdt"}
+{"id": "CDT78", "entidad": "FNA Fondo Nacional del Ahorro", "tasa": 0.11, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT79", "entidad": "Financiera Juriscoop", "tasa": 0.123, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT80", "entidad": "Coltefinanciera", "tasa": 0.124, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT81", "entidad": "Lulo Bank", "tasa": 0.125, "riesgo": "bajo", "minimo": 10000, "categoria": "cdt"}
+{"id": "CDT82", "entidad": "Nequi CDT", "tasa": 0.12, "riesgo": "bajo", "minimo": 10000, "categoria": "cdt"}
+{"id": "CDT83", "entidad": "Nubank Colombia", "tasa": 0.118, "riesgo": "bajo", "minimo": 10000, "categoria": "cdt"}
+{"id": "CDT84", "entidad": "Rappipay CDT", "tasa": 0.116, "riesgo": "bajo", "minimo": 10000, "categoria": "cdt"}
+{"id": "CDT85", "entidad": "Daviplata CDT", "tasa": 0.112, "riesgo": "bajo", "minimo": 10000, "categoria": "cdt"}
+{"id": "CDT86", "entidad": "Bancolombia 3 años", "tasa": 0.121, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT87", "entidad": "Davivienda 3 años", "tasa": 0.119, "riesgo": "bajo", "minimo": 150000, "categoria": "cdt"}
+{"id": "CDT88", "entidad": "Banco de Bogotá 3 años", "tasa": 0.12, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT89", "entidad": "BBVA Colombia 3 años", "tasa": 0.118, "riesgo": "bajo", "minimo": 200000, "categoria": "cdt"}
+{"id": "CDT90", "entidad": "Scotiabank Colpatria 3 años", "tasa": 0.124, "riesgo": "bajo", "minimo": 150000, "categoria": "cdt"}
+{"id": "CDT91", "entidad": "Banco Itaú Colombia 3 años", "tasa": 0.123, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT92", "entidad": "Serfinanza 3 años", "tasa": 0.127, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT93", "entidad": "Finandina 3 años", "tasa": 0.128, "riesgo": "bajo", "minimo": 100000, "categoria": "cdt"}
+{"id": "CDT94", "entidad": "Coltefinanciera 3 años", "tasa": 0.127, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT95", "entidad": "Banco Caja Social 3 años", "tasa": 0.122, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT96", "entidad": "Banco W 3 años", "tasa": 0.129, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT97", "entidad": "Cotrafa Cooperativa 3 años", "tasa": 0.124, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "CDT98", "entidad": "Confiar Cooperativa 3 años", "tasa": 0.128, "riesgo": "bajo", "minimo": 30000, "categoria": "cdt"}
+{"id": "CDT99", "entidad": "JFK Cooperativa 3 años", "tasa": 0.127, "riesgo": "bajo", "minimo": 30000, "categoria": "cdt"}
+{"id": "CDT100", "entidad": "Coofinep 3 años", "tasa": 0.126, "riesgo": "bajo", "minimo": 50000, "categoria": "cdt"}
+{"id": "F1", "nombre": "Fondo Balanceado A", "tasa": 0.135, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F2", "nombre": "Fondo Balanceado B", "tasa": 0.132, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F3", "nombre": "Fondo Renta Mixta", "tasa": 0.138, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F4", "nombre": "Fondo Moderado Plus", "tasa": 0.14, "riesgo": "medio", "minimo": 80000, "categoria": "fondos"}
+{"id": "F5", "nombre": "Fondo Conservador Pro", "tasa": 0.13, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F6", "nombre": "Fondo Global LATAM", "tasa": 0.142, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F7", "nombre": "Fondo Indexado COLCAP", "tasa": 0.145, "riesgo": "medio", "minimo": 70000, "categoria": "fondos"}
+{"id": "F8", "nombre": "Fondo Crecimiento", "tasa": 0.15, "riesgo": "medio", "minimo": 120000, "categoria": "fondos"}
+{"id": "F9", "nombre": "Fondo Estrategia Dinámica", "tasa": 0.148, "riesgo": "medio", "minimo": 90000, "categoria": "fondos"}
+{"id": "F10", "nombre": "Fondo Renta Variable Local", "tasa": 0.152, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F11", "nombre": "Fondo Internacional USD", "tasa": 0.149, "riesgo": "medio", "minimo": 150000, "categoria": "fondos"}
+{"id": "F12", "nombre": "Fondo ESG Colombia", "tasa": 0.137, "riesgo": "medio", "minimo": 80000, "categoria": "fondos"}
+{"id": "F13", "nombre": "Fondo Multiactivos", "tasa": 0.141, "riesgo": "medio", "minimo": 60000, "categoria": "fondos"}
+{"id": "F14", "nombre": "Fondo Renta Fija Plus", "tasa": 0.128, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F15", "nombre": "Fondo Estrategia Andina", "tasa": 0.146, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F16", "nombre": "Porvenir FPV Moderado", "tasa": 0.133, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F17", "nombre": "Porvenir FPV Conservador", "tasa": 0.12, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F18", "nombre": "Porvenir FPV Mayor Riesgo", "tasa": 0.158, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F19", "nombre": "Protección FPV Moderado", "tasa": 0.131, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F20", "nombre": "Protección FPV Conservador", "tasa": 0.119, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F21", "nombre": "Protección FPV Mayor Riesgo", "tasa": 0.156, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F22", "nombre": "Colfondos FPV Moderado", "tasa": 0.129, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F23", "nombre": "Colfondos FPV Conservador", "tasa": 0.118, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F24", "nombre": "Colfondos FPV Mayor Riesgo", "tasa": 0.154, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F25", "nombre": "Old Mutual FPV Moderado", "tasa": 0.13, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F26", "nombre": "Old Mutual FPV Conservador", "tasa": 0.117, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F27", "nombre": "Old Mutual FPV Mayor Riesgo", "tasa": 0.155, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F28", "nombre": "Fiduciaria Bancolombia FIC Renta", "tasa": 0.124, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F29", "nombre": "Fiduciaria Bancolombia FIC Acciones", "tasa": 0.16, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F30", "nombre": "Fiduciaria Davivienda FIC Conservador", "tasa": 0.122, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F31", "nombre": "Fiduciaria Davivienda FIC Moderado", "tasa": 0.135, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F32", "nombre": "Alianza Fiduciaria FIC Corto Plazo", "tasa": 0.115, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F33", "nombre": "Alianza Fiduciaria FIC Largo Plazo", "tasa": 0.138, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F34", "nombre": "Credicorp Capital FIC Colombia", "tasa": 0.143, "riesgo": "medio", "minimo": 200000, "categoria": "fondos"}
+{"id": "F35", "nombre": "Credicorp Capital FIC LATAM", "tasa": 0.147, "riesgo": "medio", "minimo": 300000, "categoria": "fondos"}
+{"id": "F36", "nombre": "BTG Pactual FIC Renta Fija", "tasa": 0.126, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F37", "nombre": "BTG Pactual FIC Renta Variable", "tasa": 0.155, "riesgo": "medio", "minimo": 200000, "categoria": "fondos"}
+{"id": "F38", "nombre": "Corficolombiana FIC Conservador", "tasa": 0.121, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F39", "nombre": "Corficolombiana FIC Moderado", "tasa": 0.136, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F40", "nombre": "Skandia FIC Equilibrio", "tasa": 0.134, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F41", "nombre": "Skandia FIC Global", "tasa": 0.148, "riesgo": "medio", "minimo": 200000, "categoria": "fondos"}
+{"id": "F42", "nombre": "Itaú Asset Management FIC", "tasa": 0.139, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F43", "nombre": "Valores Bancolombia FIC Liquidez", "tasa": 0.112, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F44", "nombre": "Acciones y Valores FIC Mixto", "tasa": 0.14, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F45", "nombre": "Ultraserfinco FIC Renta Fija", "tasa": 0.123, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F46", "nombre": "GNB Sudameris FIC Conservador", "tasa": 0.12, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F47", "nombre": "GNB Sudameris FIC Moderado", "tasa": 0.133, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F48", "nombre": "Fiduoccidente FIC Corto Plazo", "tasa": 0.114, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F49", "nombre": "Fiduoccidente FIC Moderado", "tasa": 0.131, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F50", "nombre": "FiduBogotá FIC Renta", "tasa": 0.127, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F51", "nombre": "FiduBogotá FIC Acciones", "tasa": 0.153, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F52", "nombre": "Hernández & Asociados FIC", "tasa": 0.142, "riesgo": "medio", "minimo": 150000, "categoria": "fondos"}
+{"id": "F53", "nombre": "Fondo Inmobiliario Colombia (FIC)", "tasa": 0.136, "riesgo": "medio", "minimo": 200000, "categoria": "fondos"}
+{"id": "F54", "nombre": "Larrainvial FIC Moderado", "tasa": 0.141, "riesgo": "medio", "minimo": 100000, "categoria": "fondos"}
+{"id": "F55", "nombre": "Compass Group FIC Global", "tasa": 0.15, "riesgo": "medio", "minimo": 300000, "categoria": "fondos"}
+{"id": "F56", "nombre": "Credicorp Capital Deuda Privada", "tasa": 0.155, "riesgo": "medio", "minimo": 500000, "categoria": "fondos"}
+{"id": "F57", "nombre": "Colcapital PE Fund I", "tasa": 0.18, "riesgo": "alto", "minimo": 1000000, "categoria": "fondos"}
+{"id": "F58", "nombre": "Fondo de Capital Privado Nexus", "tasa": 0.175, "riesgo": "alto", "minimo": 1000000, "categoria": "fondos"}
+{"id": "F59", "nombre": "Sembrar Siembre FIC Agro", "tasa": 0.145, "riesgo": "medio", "minimo": 200000, "categoria": "fondos"}
+{"id": "F60", "nombre": "Fondo Forestal Colombia", "tasa": 0.14, "riesgo": "medio", "minimo": 500000, "categoria": "fondos"}
+{"id": "F61", "nombre": "Fondo Infraestructura Ashmore", "tasa": 0.148, "riesgo": "medio", "minimo": 1000000, "categoria": "fondos"}
+{"id": "F62", "nombre": "FCP Kandeo Fund II", "tasa": 0.172, "riesgo": "alto", "minimo": 1000000, "categoria": "fondos"}
+{"id": "F63", "nombre": "FCP Tribeca Asset Management", "tasa": 0.168, "riesgo": "alto", "minimo": 1000000, "categoria": "fondos"}
+{"id": "F64", "nombre": "Altra Investments FIC", "tasa": 0.162, "riesgo": "alto", "minimo": 500000, "categoria": "fondos"}
+{"id": "F65", "nombre": "Fondo Pensional Colpensiones Voluntario", "tasa": 0.116, "riesgo": "bajo", "minimo": 50000, "categoria": "fondos"}
+{"id": "F66", "nombre": "Horizonte FPV Moderado", "tasa": 0.128, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F67", "nombre": "Fondo BBVA Horizonte Conservador", "tasa": 0.115, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F68", "nombre": "Fondo BBVA Horizonte Mayor Riesgo", "tasa": 0.152, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F69", "nombre": "Fondo Sura Moderado AFP", "tasa": 0.13, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "F70", "nombre": "Fondo Sura Conservador AFP", "tasa": 0.116, "riesgo": "medio", "minimo": 50000, "categoria": "fondos"}
+{"id": "A1", "empresa": "Ecopetrol", "tasa": 0.18, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A2", "empresa": "Bancolombia", "tasa": 0.17, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A3", "empresa": "Grupo Sura", "tasa": 0.19, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A4", "empresa": "ISA (Interconexión Eléctrica)", "tasa": 0.16, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A5", "empresa": "Celsia", "tasa": 0.2, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A6", "empresa": "Grupo Argos", "tasa": 0.185, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A7", "empresa": "Nutresa", "tasa": 0.175, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A8", "empresa": "Almacenes Éxito", "tasa": 0.165, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A9", "empresa": "Terpel", "tasa": 0.182, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A10", "empresa": "Canacol Energy", "tasa": 0.195, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A11", "empresa": "Bancolombia Preferencial", "tasa": 0.168, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A12", "empresa": "Davivienda Preferencial", "tasa": 0.162, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A13", "empresa": "Cementos Argos", "tasa": 0.178, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A14", "empresa": "Grupo Bolívar", "tasa": 0.171, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A15", "empresa": "Corficolombiana", "tasa": 0.174, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A16", "empresa": "Patio (ex Éxito Preferencial)", "tasa": 0.158, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A17", "empresa": "ETB (Empresa de Telecomunicaciones de Bogotá)", "tasa": 0.145, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A18", "empresa": "Preferencial Grupo Sura", "tasa": 0.188, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A19", "empresa": "Pacific Exploration", "tasa": 0.21, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A20", "empresa": "BVC (Bolsa de Valores de Colombia)", "tasa": 0.155, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A21", "empresa": "Mineros S.A.", "tasa": 0.205, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A22", "empresa": "Promigas", "tasa": 0.166, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A23", "empresa": "Conconcreto", "tasa": 0.192, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A24", "empresa": "Interbolsa Holding (recuperación)", "tasa": 0.22, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A25", "empresa": "Odinsa", "tasa": 0.183, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A26", "empresa": "Gases de Occidente", "tasa": 0.169, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A27", "empresa": "Tecnoglass", "tasa": 0.215, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A28", "empresa": "Grupo Empresarial de Medellín", "tasa": 0.176, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A29", "empresa": "EPM (acciones secundarias)", "tasa": 0.163, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A30", "empresa": "Carvajal S.A.", "tasa": 0.172, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A31", "empresa": "Valorem S.A.", "tasa": 0.167, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A32", "empresa": "Grupo Aval", "tasa": 0.16, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A33", "empresa": "Grupo Aval Preferencial", "tasa": 0.157, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A34", "empresa": "Coltejer", "tasa": 0.14, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A35", "empresa": "Fabricato", "tasa": 0.138, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A36", "empresa": "Isagen", "tasa": 0.156, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A37", "empresa": "EEB (Empresa de Energía de Bogotá)", "tasa": 0.152, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A38", "empresa": "Avianca Holdings", "tasa": 0.23, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A39", "empresa": "Copa Holdings (BVC)", "tasa": 0.198, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A40", "empresa": "Latam Airlines (BVC)", "tasa": 0.202, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A41", "empresa": "Samsung ADR (BVC referenciado)", "tasa": 0.185, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A42", "empresa": "Amazon ADR (BVC referenciado)", "tasa": 0.225, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A43", "empresa": "Apple ADR (BVC referenciado)", "tasa": 0.195, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A44", "empresa": "Microsoft ADR (BVC referenciado)", "tasa": 0.21, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A45", "empresa": "Alphabet ADR (BVC referenciado)", "tasa": 0.218, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A46", "empresa": "Tesla ADR (BVC referenciado)", "tasa": 0.26, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A47", "empresa": "Meta ADR (BVC referenciado)", "tasa": 0.235, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A48", "empresa": "Nvidia ADR (BVC referenciado)", "tasa": 0.27, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A49", "empresa": "Petrobras ADR (BVC referenciado)", "tasa": 0.2, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A50", "empresa": "Vale ADR (BVC referenciado)", "tasa": 0.19, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A51", "empresa": "Colsanitas (no listada, OTC)", "tasa": 0.17, "riesgo": "alto", "minimo": 100000, "categoria": "acciones"}
+{"id": "A52", "empresa": "Postobón (no listada, OTC)", "tasa": 0.165, "riesgo": "alto", "minimo": 100000, "categoria": "acciones"}
+{"id": "A53", "empresa": "Alpina (no listada, OTC)", "tasa": 0.168, "riesgo": "alto", "minimo": 100000, "categoria": "acciones"}
+{"id": "A54", "empresa": "Nacional de Chocolates", "tasa": 0.173, "riesgo": "alto", "minimo": 20000, "categoria": "acciones"}
+{"id": "A55", "empresa": "Bancolombia ADR NYSE", "tasa": 0.172, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A56", "empresa": "Ecopetrol ADR NYSE", "tasa": 0.182, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A57", "empresa": "Grupo Sura ADR NYSE", "tasa": 0.191, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A58", "empresa": "Cemex (BVC referenciado)", "tasa": 0.187, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A59", "empresa": "Falabella (BVC referenciado)", "tasa": 0.176, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A60", "empresa": "Mercado Libre (BVC referenciado)", "tasa": 0.24, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A61", "empresa": "Bancolombia GDR", "tasa": 0.171, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A62", "empresa": "Wok Colombia (privada)", "tasa": 0.18, "riesgo": "alto", "minimo": 100000, "categoria": "acciones"}
+{"id": "A63", "empresa": "Crezcamos (microfinanciera)", "tasa": 0.195, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A64", "empresa": "Rappi (privada, ronda secundaria)", "tasa": 0.28, "riesgo": "alto", "minimo": 500000, "categoria": "acciones"}
+{"id": "A65", "empresa": "Habi (proptech Colombia)", "tasa": 0.26, "riesgo": "alto", "minimo": 500000, "categoria": "acciones"}
+{"id": "A66", "empresa": "JPMorgan Chase ADR", "tasa": 0.145, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A67", "empresa": "Bank of America ADR", "tasa": 0.14, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A68", "empresa": "Goldman Sachs ADR", "tasa": 0.155, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A69", "empresa": "Visa ADR", "tasa": 0.16, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A70", "empresa": "Mastercard ADR", "tasa": 0.162, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A71", "empresa": "Johnson & Johnson ADR", "tasa": 0.108, "riesgo": "medio", "minimo": 50000, "categoria": "acciones"}
+{"id": "A72", "empresa": "Pfizer ADR", "tasa": 0.125, "riesgo": "medio", "minimo": 50000, "categoria": "acciones"}
+{"id": "A73", "empresa": "ExxonMobil ADR", "tasa": 0.138, "riesgo": "medio", "minimo": 50000, "categoria": "acciones"}
+{"id": "A74", "empresa": "Chevron ADR", "tasa": 0.135, "riesgo": "medio", "minimo": 50000, "categoria": "acciones"}
+{"id": "A75", "empresa": "Coca-Cola ADR", "tasa": 0.095, "riesgo": "medio", "minimo": 50000, "categoria": "acciones"}
+{"id": "A76", "empresa": "McDonald's ADR", "tasa": 0.11, "riesgo": "medio", "minimo": 50000, "categoria": "acciones"}
+{"id": "A77", "empresa": "Walt Disney ADR", "tasa": 0.13, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A78", "empresa": "Netflix ADR", "tasa": 0.185, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A79", "empresa": "Spotify ADR", "tasa": 0.175, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A80", "empresa": "Airbnb ADR", "tasa": 0.178, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A81", "empresa": "Uber ADR", "tasa": 0.172, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A82", "empresa": "PayPal ADR", "tasa": 0.148, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A83", "empresa": "Block (ex Square) ADR", "tasa": 0.182, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A84", "empresa": "Shopify ADR", "tasa": 0.195, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A85", "empresa": "Palantir ADR", "tasa": 0.21, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A86", "empresa": "Coinbase ADR", "tasa": 0.23, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A87", "empresa": "Robinhood ADR", "tasa": 0.215, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A88", "empresa": "Nubank (NU) NYSE", "tasa": 0.2, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A89", "empresa": "MercadoLibre (MELI) NASDAQ", "tasa": 0.24, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "A90", "empresa": "Globant NYSE", "tasa": 0.22, "riesgo": "alto", "minimo": 50000, "categoria": "acciones"}
+{"id": "C1", "token": "Bitcoin (BTC)", "tasa": 0.3, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C2", "token": "Ethereum (ETH)", "tasa": 0.28, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C3", "token": "Solana (SOL)", "tasa": 0.35, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C4", "token": "Cardano (ADA)", "tasa": 0.25, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C5", "token": "Polygon (MATIC)", "tasa": 0.27, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C6", "token": "Chainlink (LINK)", "tasa": 0.29, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C7", "token": "Avalanche (AVAX)", "tasa": 0.33, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C8", "token": "Litecoin (LTC)", "tasa": 0.22, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C9", "token": "Polkadot (DOT)", "tasa": 0.31, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C10", "token": "Uniswap (UNI)", "tasa": 0.34, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C11", "token": "Ripple (XRP)", "tasa": 0.26, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C12", "token": "Dogecoin (DOGE)", "tasa": 0.38, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C13", "token": "Shiba Inu (SHIB)", "tasa": 0.4, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C14", "token": "BNB (Binance Coin)", "tasa": 0.31, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C15", "token": "Toncoin (TON)", "tasa": 0.36, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C16", "token": "Near Protocol (NEAR)", "tasa": 0.355, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C17", "token": "Arbitrum (ARB)", "tasa": 0.37, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C18", "token": "Optimism (OP)", "tasa": 0.365, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C19", "token": "Cosmos (ATOM)", "tasa": 0.32, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C20", "token": "Aptos (APT)", "tasa": 0.375, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C21", "token": "Sui (SUI)", "tasa": 0.38, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C22", "token": "Internet Computer (ICP)", "tasa": 0.295, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C23", "token": "Stellar (XLM)", "tasa": 0.245, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C24", "token": "VeChain (VET)", "tasa": 0.285, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C25", "token": "Filecoin (FIL)", "tasa": 0.305, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C26", "token": "Injective (INJ)", "tasa": 0.39, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C27", "token": "Render (RNDR)", "tasa": 0.385, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C28", "token": "Hedera (HBAR)", "tasa": 0.275, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C29", "token": "Algorand (ALGO)", "tasa": 0.255, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C30", "token": "Aave (AAVE)", "tasa": 0.315, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C31", "token": "Maker (MKR)", "tasa": 0.3, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C32", "token": "Compound (COMP)", "tasa": 0.295, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C33", "token": "The Graph (GRT)", "tasa": 0.33, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C34", "token": "Sandbox (SAND)", "tasa": 0.345, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C35", "token": "Decentraland (MANA)", "tasa": 0.34, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C36", "token": "Axie Infinity (AXS)", "tasa": 0.36, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C37", "token": "Enjin Coin (ENJ)", "tasa": 0.32, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C38", "token": "Theta Network (THETA)", "tasa": 0.31, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C39", "token": "EOS (EOS)", "tasa": 0.265, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C40", "token": "Tezos (XTZ)", "tasa": 0.27, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C41", "token": "Stacks (STX)", "tasa": 0.345, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C42", "token": "Cronos (CRO)", "tasa": 0.28, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C43", "token": "OKB (OKX)", "tasa": 0.285, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C44", "token": "Pepe (PEPE)", "tasa": 0.45, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C45", "token": "Floki (FLOKI)", "tasa": 0.43, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C46", "token": "WIF (dogwifhat)", "tasa": 0.44, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C47", "token": "Bonk (BONK)", "tasa": 0.42, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C48", "token": "Worldcoin (WLD)", "tasa": 0.395, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C49", "token": "Mantle (MNT)", "tasa": 0.335, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C50", "token": "Sei (SEI)", "tasa": 0.375, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C51", "token": "Pyth Network (PYTH)", "tasa": 0.38, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C52", "token": "Celestia (TIA)", "tasa": 0.385, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C53", "token": "Blur (BLUR)", "tasa": 0.365, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C54", "token": "dYdX (DYDX)", "tasa": 0.355, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C55", "token": "Lido DAO (LDO)", "tasa": 0.325, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C56", "token": "Rocket Pool (RPL)", "tasa": 0.315, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C57", "token": "Curve DAO (CRV)", "tasa": 0.305, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C58", "token": "Balancer (BAL)", "tasa": 0.295, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C59", "token": "1inch (1INCH)", "tasa": 0.29, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C60", "token": "SushiSwap (SUSHI)", "tasa": 0.285, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C61", "token": "Synthetix (SNX)", "tasa": 0.295, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C62", "token": "Yearn Finance (YFI)", "tasa": 0.305, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C63", "token": "Convex Finance (CVX)", "tasa": 0.3, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C64", "token": "Frax Share (FXS)", "tasa": 0.295, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C65", "token": "Pendle (PENDLE)", "tasa": 0.36, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C66", "token": "Eigen Layer (EIGEN)", "tasa": 0.39, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C67", "token": "Ethena (ENA)", "tasa": 0.37, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C68", "token": "Jito (JTO)", "tasa": 0.355, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C69", "token": "Jupiter (JUP)", "tasa": 0.365, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C70", "token": "Raydium (RAY)", "tasa": 0.375, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C71", "token": "Bitcoin Cash (BCH)", "tasa": 0.24, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C72", "token": "Bitcoin SV (BSV)", "tasa": 0.23, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C73", "token": "Monero (XMR)", "tasa": 0.25, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C74", "token": "Zcash (ZEC)", "tasa": 0.245, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C75", "token": "Dash (DASH)", "tasa": 0.235, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C76", "token": "IOTA (MIOTA)", "tasa": 0.28, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C77", "token": "Neo (NEO)", "tasa": 0.27, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C78", "token": "Waves (WAVES)", "tasa": 0.26, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C79", "token": "Qtum (QTUM)", "tasa": 0.255, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C80", "token": "Zilliqa (ZIL)", "tasa": 0.265, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C81", "token": "Gala (GALA)", "tasa": 0.35, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C82", "token": "Immutable X (IMX)", "tasa": 0.345, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C83", "token": "Magic (MAGIC)", "tasa": 0.34, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C84", "token": "Ronin (RON)", "tasa": 0.335, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C85", "token": "Gods Unchained (GODS)", "tasa": 0.33, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C86", "token": "Nervos Network (CKB)", "tasa": 0.275, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C87", "token": "Harmony (ONE)", "tasa": 0.27, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C88", "token": "Celo (CELO)", "tasa": 0.285, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C89", "token": "Kava (KAVA)", "tasa": 0.29, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C90", "token": "Osmosis (OSMO)", "tasa": 0.295, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C91", "token": "Akash Network (AKT)", "tasa": 0.36, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C92", "token": "Fetch.ai (FET)", "tasa": 0.355, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C93", "token": "SingularityNET (AGIX)", "tasa": 0.35, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C94", "token": "Ocean Protocol (OCEAN)", "tasa": 0.33, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "C95", "token": "Numeraire (NMR)", "tasa": 0.31, "riesgo": "alto", "minimo": 10000, "categoria": "criptomoneda"}
+{"id": "B1", "nombre": "TES Tasa Fija 2026", "tasa": 0.105, "riesgo": "bajo", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B2", "nombre": "TES Tasa Fija 2028", "tasa": 0.1075, "riesgo": "bajo", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B3", "nombre": "TES Tasa Fija 2030", "tasa": 0.109, "riesgo": "bajo", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B4", "nombre": "TES Tasa Fija 2032", "tasa": 0.11, "riesgo": "bajo", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B5", "nombre": "TES Tasa Fija 2034", "tasa": 0.111, "riesgo": "bajo", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B6", "nombre": "TES UVR 2027", "tasa": 0.042, "riesgo": "bajo", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B7", "nombre": "TES UVR 2029", "tasa": 0.0435, "riesgo": "bajo", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B8", "nombre": "TES UVR 2031", "tasa": 0.045, "riesgo": "bajo", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B9", "nombre": "TES UVR 2035", "tasa": 0.046, "riesgo": "bajo", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B10", "nombre": "TES Global USD 2027", "tasa": 0.07, "riesgo": "bajo", "minimo": 5000000, "categoria": "bonos"}
+{"id": "B11", "nombre": "TES Global USD 2030", "tasa": 0.0725, "riesgo": "bajo", "minimo": 5000000, "categoria": "bonos"}
+{"id": "B12", "nombre": "TES Global USD 2037", "tasa": 0.075, "riesgo": "bajo", "minimo": 5000000, "categoria": "bonos"}
+{"id": "B13", "nombre": "Bono Ecopetrol 2026", "tasa": 0.115, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B14", "nombre": "Bono Ecopetrol 2029 USD", "tasa": 0.0775, "riesgo": "medio", "minimo": 5000000, "categoria": "bonos"}
+{"id": "B15", "nombre": "Bono Ecopetrol 2033 USD", "tasa": 0.08, "riesgo": "medio", "minimo": 5000000, "categoria": "bonos"}
+{"id": "B16", "nombre": "Bono Bancolombia 2027", "tasa": 0.1125, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B17", "nombre": "Bono Bancolombia 2031 USD", "tasa": 0.075, "riesgo": "medio", "minimo": 5000000, "categoria": "bonos"}
+{"id": "B18", "nombre": "Bono Davivienda 2027", "tasa": 0.113, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B19", "nombre": "Bono Davivienda Subordinado 2029", "tasa": 0.1175, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B20", "nombre": "Bono ISA 2028", "tasa": 0.11, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B21", "nombre": "Bono ISA USD 2031", "tasa": 0.0725, "riesgo": "medio", "minimo": 5000000, "categoria": "bonos"}
+{"id": "B22", "nombre": "Bono Celsia 2027", "tasa": 0.1145, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B23", "nombre": "Bono Promigas 2029", "tasa": 0.1155, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B24", "nombre": "Bono ETB 2026", "tasa": 0.114, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B25", "nombre": "Bono EEB 2030 USD", "tasa": 0.074, "riesgo": "medio", "minimo": 5000000, "categoria": "bonos"}
+{"id": "B26", "nombre": "Bono Corficolombiana 2028", "tasa": 0.116, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B27", "nombre": "Bono Grupo Argos 2029", "tasa": 0.117, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B28", "nombre": "Bono Nutresa 2027", "tasa": 0.1135, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B29", "nombre": "Bono Grupo Sura 2028", "tasa": 0.115, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B30", "nombre": "Bono Avianca 2028 USD", "tasa": 0.095, "riesgo": "alto", "minimo": 5000000, "categoria": "bonos"}
+{"id": "B31", "nombre": "Bono BID Colombia COP 2027", "tasa": 0.1025, "riesgo": "bajo", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B32", "nombre": "Bono CAF COP 2028", "tasa": 0.103, "riesgo": "bajo", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B33", "nombre": "Bono Banco Mundial COP 2029", "tasa": 0.102, "riesgo": "bajo", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B34", "nombre": "Bono IFC Colombia COP 2027", "tasa": 0.1035, "riesgo": "bajo", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B35", "nombre": "Bono Verde Bancolombia 2030", "tasa": 0.114, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B36", "nombre": "Bono Social Davivienda 2028", "tasa": 0.1135, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B37", "nombre": "Bono Sostenible ISA 2032 USD", "tasa": 0.073, "riesgo": "medio", "minimo": 5000000, "categoria": "bonos"}
+{"id": "B38", "nombre": "Bono Verde EEB 2031", "tasa": 0.112, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B39", "nombre": "Bono Verde Celsia 2030", "tasa": 0.1145, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B40", "nombre": "Bono Social Findeter 2029", "tasa": 0.105, "riesgo": "bajo", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B41", "nombre": "Bono Bancolombia IBR+1.5% 2026", "tasa": 0.12, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B42", "nombre": "Bono Davivienda IBR+1.4% 2027", "tasa": 0.1195, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B43", "nombre": "Bono Ecopetrol IBR+2.0% 2028", "tasa": 0.124, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B44", "nombre": "Bono Promigas IBR+1.8% 2029", "tasa": 0.123, "riesgo": "medio", "minimo": 1000000, "categoria": "bonos"}
+{"id": "B45", "nombre": "TES IPC+3.5% 2030", "tasa": 0.115, "riesgo": "bajo", "minimo": 1000000, "categoria": "bonos"}
+{"id": "FR1", "nombre": "La Haus - Proyecto Bogotá Norte", "tasa": 0.128, "riesgo": "medio", "minimo": 5000000, "categoria": "finca_raiz"}
+{"id": "FR2", "nombre": "La Haus - Proyecto Medellín El Poblado", "tasa": 0.132, "riesgo": "medio", "minimo": 5000000, "categoria": "finca_raiz"}
+{"id": "FR3", "nombre": "Woki Inmobiliario - Apartamentos Cali", "tasa": 0.125, "riesgo": "medio", "minimo": 3000000, "categoria": "finca_raiz"}
+{"id": "FR4", "nombre": "Inverland - Lotes Cundinamarca", "tasa": 0.118, "riesgo": "medio", "minimo": 2000000, "categoria": "finca_raiz"}
+{"id": "FR5", "nombre": "Inverland - Fincas Antioquia", "tasa": 0.12, "riesgo": "medio", "minimo": 3000000, "categoria": "finca_raiz"}
+{"id": "FR6", "nombre": "Constructora Conconcreto - VIS Bogotá", "tasa": 0.115, "riesgo": "medio", "minimo": 2000000, "categoria": "finca_raiz"}
+{"id": "FR7", "nombre": "Coninsa Ramón H - Proyectos Laureles", "tasa": 0.122, "riesgo": "medio", "minimo": 5000000, "categoria": "finca_raiz"}
+{"id": "FR8", "nombre": "Amarilo - VIS Cundinamarca", "tasa": 0.112, "riesgo": "medio", "minimo": 2000000, "categoria": "finca_raiz"}
+{"id": "FR9", "nombre": "Capital Invest - Oficinas Bogotá", "tasa": 0.135, "riesgo": "medio", "minimo": 10000000, "categoria": "finca_raiz"}
+{"id": "FR10", "nombre": "Tuhabi - Compra-venta residencial", "tasa": 0.14, "riesgo": "medio", "minimo": 5000000, "categoria": "finca_raiz"}
+{"id": "FR11", "nombre": "Grupo Oikos - Bodegas industriales", "tasa": 0.138, "riesgo": "medio", "minimo": 10000000, "categoria": "finca_raiz"}
+{"id": "FR12", "nombre": "Proeza - Locales comerciales Cali", "tasa": 0.13, "riesgo": "medio", "minimo": 5000000, "categoria": "finca_raiz"}
+{"id": "FR13", "nombre": "Fondo Inmobiliario Abacus Colombia", "tasa": 0.127, "riesgo": "medio", "minimo": 5000000, "categoria": "finca_raiz"}
+{"id": "FR14", "nombre": "Crowdfunding Colcapital - Retail", "tasa": 0.145, "riesgo": "medio", "minimo": 1000000, "categoria": "finca_raiz"}
+{"id": "FR15", "nombre": "Copropiedad - Turístico San Andrés", "tasa": 0.15, "riesgo": "medio", "minimo": 5000000, "categoria": "finca_raiz"}
+{"id": "FR16", "nombre": "Hotelería - Cartagena Bocagrande", "tasa": 0.16, "riesgo": "alto", "minimo": 10000000, "categoria": "finca_raiz"}
+{"id": "FR17", "nombre": "Agroinversiones - Café Huila", "tasa": 0.142, "riesgo": "medio", "minimo": 3000000, "categoria": "finca_raiz"}
+{"id": "FR18", "nombre": "Agroinversiones - Aguacate Hass Antioquia", "tasa": 0.148, "riesgo": "medio", "minimo": 3000000, "categoria": "finca_raiz"}
+{"id": "FR19", "nombre": "Agroinversiones - Palma Aceite Meta", "tasa": 0.135, "riesgo": "medio", "minimo": 5000000, "categoria": "finca_raiz"}
+{"id": "FR20", "nombre": "Crowdfunding inmobiliario Bankii", "tasa": 0.143, "riesgo": "medio", "minimo": 500000, "categoria": "finca_raiz"}
+{"id": "FR21", "nombre": "Ganado Bovino Magdalena Medio", "tasa": 0.148, "riesgo": "medio", "minimo": 2000000, "categoria": "finca_raiz"}
+{"id": "FR22", "nombre": "Cacao Fino Aroma Huila", "tasa": 0.15, "riesgo": "medio", "minimo": 1000000, "categoria": "finca_raiz"}
+{"id": "FR23", "nombre": "Banano Exportación Urabá", "tasa": 0.145, "riesgo": "medio", "minimo": 2000000, "categoria": "finca_raiz"}
+{"id": "FR24", "nombre": "Flores Exportación Sabana Bogotá", "tasa": 0.152, "riesgo": "medio", "minimo": 2000000, "categoria": "finca_raiz"}
+{"id": "FR25", "nombre": "Caña Azúcar Valle del Cauca", "tasa": 0.14, "riesgo": "medio", "minimo": 3000000, "categoria": "finca_raiz"}
+{"id": "FR26", "nombre": "Trucha Arco Iris Nariño", "tasa": 0.155, "riesgo": "medio", "minimo": 1000000, "categoria": "finca_raiz"}
+{"id": "FR27", "nombre": "Camarón Pacífico Tumaco", "tasa": 0.158, "riesgo": "medio", "minimo": 2000000, "categoria": "finca_raiz"}
+{"id": "FR28", "nombre": "Mango Tommy Tolima", "tasa": 0.142, "riesgo": "medio", "minimo": 1000000, "categoria": "finca_raiz"}
+{"id": "FR29", "nombre": "Gulupa Cundinamarca exportación", "tasa": 0.148, "riesgo": "medio", "minimo": 1000000, "categoria": "finca_raiz"}
+{"id": "FR30", "nombre": "Forestación Pinos Boyacá", "tasa": 0.135, "riesgo": "medio", "minimo": 2000000, "categoria": "finca_raiz"}
+{"id": "FR31", "nombre": "Parque Solar La Guajira Participación", "tasa": 0.155, "riesgo": "medio", "minimo": 1000000, "categoria": "finca_raiz"}
+{"id": "FR32", "nombre": "Parque Eólico Atlántico Participación", "tasa": 0.158, "riesgo": "medio", "minimo": 1000000, "categoria": "finca_raiz"}
+{"id": "FR33", "nombre": "Mini Hidro Cauca Participación", "tasa": 0.148, "riesgo": "medio", "minimo": 2000000, "categoria": "finca_raiz"}
+{"id": "FR34", "nombre": "Paneles Solares Residencial Bogotá", "tasa": 0.135, "riesgo": "medio", "minimo": 500000, "categoria": "finca_raiz"}
+{"id": "FR35", "nombre": "Biogás Residuos Medellín", "tasa": 0.142, "riesgo": "medio", "minimo": 1000000, "categoria": "finca_raiz"}
+{"id": "FR36", "nombre": "Franquicia Juan Valdez Café", "tasa": 0.18, "riesgo": "alto", "minimo": 50000000, "categoria": "finca_raiz"}
+{"id": "FR37", "nombre": "Franquicia Crepes & Waffles", "tasa": 0.175, "riesgo": "alto", "minimo": 80000000, "categoria": "finca_raiz"}
+{"id": "FR38", "nombre": "Franquicia Frisby", "tasa": 0.17, "riesgo": "alto", "minimo": 60000000, "categoria": "finca_raiz"}
+{"id": "FR39", "nombre": "Franquicia Subway Colombia", "tasa": 0.165, "riesgo": "alto", "minimo": 70000000, "categoria": "finca_raiz"}
+{"id": "FR40", "nombre": "Franquicia OMA Café", "tasa": 0.172, "riesgo": "alto", "minimo": 50000000, "categoria": "finca_raiz"}
+{"id": "FR41", "nombre": "Franquicia 4-72 Mensajería", "tasa": 0.16, "riesgo": "alto", "minimo": 30000000, "categoria": "finca_raiz"}
+{"id": "FR42", "nombre": "Franquicia Alkosto Express", "tasa": 0.168, "riesgo": "alto", "minimo": 100000000, "categoria": "finca_raiz"}
+{"id": "FR43", "nombre": "Franquicia Kokoriko", "tasa": 0.174, "riesgo": "alto", "minimo": 40000000, "categoria": "finca_raiz"}
+{"id": "FR44", "nombre": "Franquicia El Corral", "tasa": 0.178, "riesgo": "alto", "minimo": 80000000, "categoria": "finca_raiz"}
+{"id": "FR45", "nombre": "Franquicia Presto", "tasa": 0.166, "riesgo": "alto", "minimo": 50000000, "categoria": "finca_raiz"}
+{"id": "FR46", "nombre": "Franquicia Tostao' Café & Pan", "tasa": 0.17, "riesgo": "alto", "minimo": 40000000, "categoria": "finca_raiz"}
+{"id": "FR47", "nombre": "Coworking WeWork Bogotá participación", "tasa": 0.145, "riesgo": "medio", "minimo": 5000000, "categoria": "finca_raiz"}
+{"id": "FR48", "nombre": "Coworking Selina Cartagena participación", "tasa": 0.15, "riesgo": "medio", "minimo": 5000000, "categoria": "finca_raiz"}
+{"id": "FR49", "nombre": "Airbnb Management Medellín", "tasa": 0.16, "riesgo": "alto", "minimo": 10000000, "categoria": "finca_raiz"}
+{"id": "FR50", "nombre": "Parking inteligente Bogotá", "tasa": 0.138, "riesgo": "medio", "minimo": 5000000, "categoria": "finca_raiz"}
+{"id": "ETF1", "nombre": "iShares MSCI Colombia ETF (ICOL)", "tasa": 0.155, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF2", "nombre": "iShares Latin America 40 ETF (ILF)", "tasa": 0.148, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF3", "nombre": "iShares MSCI Emerging Markets (EEM)", "tasa": 0.142, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF4", "nombre": "Vanguard S&P 500 ETF (VOO)", "tasa": 0.138, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF5", "nombre": "SPDR S&P 500 ETF (SPY)", "tasa": 0.138, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF6", "nombre": "Invesco QQQ (tecnología NASDAQ)", "tasa": 0.165, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF7", "nombre": "iShares Core MSCI EAFE (IEFA)", "tasa": 0.128, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF8", "nombre": "Vanguard Total World Stock (VT)", "tasa": 0.13, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF9", "nombre": "iShares Global Clean Energy (ICLN)", "tasa": 0.145, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF10", "nombre": "ARK Innovation ETF (ARKK)", "tasa": 0.2, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF11", "nombre": "Vanguard FTSE Developed Markets (VEA)", "tasa": 0.125, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF12", "nombre": "iShares TIPS Bond ETF (TIP)", "tasa": 0.062, "riesgo": "bajo", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF13", "nombre": "iShares 20+ Year Treasury Bond (TLT)", "tasa": 0.058, "riesgo": "bajo", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF14", "nombre": "SPDR Gold Shares (GLD)", "tasa": 0.072, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF15", "nombre": "iShares Silver Trust (SLV)", "tasa": 0.085, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF16", "nombre": "United States Oil Fund (USO)", "tasa": 0.11, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF17", "nombre": "Vanguard Real Estate ETF (VNQ)", "tasa": 0.098, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF18", "nombre": "Financial Select Sector SPDR (XLF)", "tasa": 0.135, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF19", "nombre": "Health Care Select Sector SPDR (XLV)", "tasa": 0.12, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF20", "nombre": "ProShares Bitcoin Strategy ETF (BITO)", "tasa": 0.28, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF21", "nombre": "Vanguard Dividend Appreciation (VIG)", "tasa": 0.105, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF22", "nombre": "iShares Select Dividend ETF (DVY)", "tasa": 0.11, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF23", "nombre": "Schwab US Dividend Equity (SCHD)", "tasa": 0.112, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF24", "nombre": "iShares MSCI Brazil (EWZ)", "tasa": 0.162, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF25", "nombre": "iShares MSCI Mexico (EWW)", "tasa": 0.145, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF26", "nombre": "iShares MSCI Chile (ECH)", "tasa": 0.138, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF27", "nombre": "Global X MSCI Argentina (ARGT)", "tasa": 0.17, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF28", "nombre": "WisdomTree Emerging Markets (DEM)", "tasa": 0.135, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF29", "nombre": "iShares MSCI India (INDA)", "tasa": 0.155, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF30", "nombre": "Xtrackers MSCI China (MCHI)", "tasa": 0.14, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF31", "nombre": "iShares MSCI South Korea (EWY)", "tasa": 0.138, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF32", "nombre": "iShares MSCI Japan (EWJ)", "tasa": 0.118, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF33", "nombre": "Vanguard FTSE Europe (VGK)", "tasa": 0.122, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF34", "nombre": "iShares MSCI Germany (EWG)", "tasa": 0.128, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF35", "nombre": "SPDR Bloomberg Barclays HY Bond (JNK)", "tasa": 0.092, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF36", "nombre": "iShares iBoxx High Yield Corp Bond (HYG)", "tasa": 0.09, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF37", "nombre": "Invesco DB Commodity Index (DBC)", "tasa": 0.095, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF38", "nombre": "Energy Select Sector SPDR (XLE)", "tasa": 0.13, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF39", "nombre": "Materials Select Sector SPDR (XLB)", "tasa": 0.125, "riesgo": "medio", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF40", "nombre": "Utilities Select Sector SPDR (XLU)", "tasa": 0.098, "riesgo": "bajo", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF41", "nombre": "Consumer Staples Select Sector SPDR (XLP)", "tasa": 0.092, "riesgo": "bajo", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF42", "nombre": "Direxion Daily S&P 500 Bull 3x (SPXL)", "tasa": 0.35, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF43", "nombre": "ProShares UltraPro QQQ (TQQQ)", "tasa": 0.4, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF44", "nombre": "iShares Cybersecurity & Tech (IHAK)", "tasa": 0.168, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF45", "nombre": "Global X Robotics & AI ETF (BOTZ)", "tasa": 0.172, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF46", "nombre": "Global X Cloud Computing ETF (CLOU)", "tasa": 0.165, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF47", "nombre": "ARK Genomic Revolution ETF (ARKG)", "tasa": 0.19, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF48", "nombre": "ARK Fintech Innovation ETF (ARKF)", "tasa": 0.185, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF49", "nombre": "VanEck Semiconductor ETF (SMH)", "tasa": 0.195, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
+{"id": "ETF50", "nombre": "iShares Bitcoin Trust ETF (IBIT)", "tasa": 0.29, "riesgo": "alto", "minimo": 100000, "categoria": "etf"}
