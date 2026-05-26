@@ -1,19 +1,15 @@
+import math
+from typing import Any, Dict, List
+from pydantic import BaseModel
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-import json
-import random
-import re
 from ollama import chat
 
-# =============== IMPORTAR DEL SCRIPT EVOLUTIVO ===============
 from asistentefinancieroevolutivo import optimizar_perfil, cargar_catalogo
 from asistente_financiero_inteligente import analisis_inteligente as generar_analisis_inteligente
 
-# =============== CONFIGURACIÓN ===============
 app = FastAPI(title="Asistente Financiero", version="1.0")
 
-# CORS para permitir requests desde el frontend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -28,8 +24,7 @@ SYSTEM = """
 Actúa como un Asistente de Planificación Financiera Educativo especializado en el mercado colombiano.
 
 OBJETIVO:
-Procesar el salario mensual y nivel de riesgo del usuario para proponer una estructura
-de ahorro e inversión basada en la regla 50/30/20.
+Procesar el salario mensual y nivel de riesgo del usuario para proponer una estructura de ahorro e inversión basada en la regla 50/30/20.
 
 PERSONALIDAD:
 - Español neutro colombiano.
@@ -37,12 +32,12 @@ PERSONALIDAD:
 - Lenguaje sencillo para personas sin educación financiera.
 
 RESTRICCIONES:
-1. Usa EXCLUSIVAMENTE los números del mensaje del usuario.
+1. Usa EXCLUSIVAMENTE los números del mensaje del usuario. Escríbelos siempre en formato plano (ej. 3000000, sin puntos ni comas de miles).
 2. Siempre incluye: "⚠️ Esta es una simulación con fines educativos."
-3. Si salario < 1 SMMLV (1.423.500 COP): Prioriza fondo de emergencia.
+3. Si salario < 1 SMMLV (1750905 COP): Prioriza fondo de emergencia.
 
-REGLAS FINANCIERAS (Colombia 2025):
-- SMMLV 2025: 1.423.500 COP
+REGLAS FINANCIERAS (Colombia 2026):
+- SMMLV 2026: 1750905 COP
 - Regla 50/30/20: 50% Necesidades | 30% Deseos | 20% Ahorro/Inversión
 - Fondo de emergencia: 3 meses de Necesidades
 
@@ -63,20 +58,23 @@ Riesgo Alto:
   - ETF S&P 500 en COP: 15.00% EA
 """
 
-# =============== MODELOS PYDANTIC ===============
 class ConsultaFinanciera(BaseModel):
-    salario: int
-    nivel_riesgo: str  # Bajo, Medio, Alto
-    objetivo_financiero: str
-    horizonte: str
-    fondo_emergencia: bool = True
-
-class RespuestaFinanciera(BaseModel):
     salario: int
     nivel_riesgo: str
     objetivo_financiero: str
     horizonte: str
-    fondo_emergencia: bool
+    fondo_emergencia: bool = True
+    endeudamiento: bool = False
+    gastos_fijos: int = 0
+    deudas: int = 0
+
+class RespuestaFinanciera(BaseModel):
+    salario: int
+    gastos_fijos: int
+    deudas: int
+    riesgo: str
+    horizonte: str
+    objetivo_financiero: str
     ahorro_inversion: int
     necesidades: int
     deseos: int
@@ -86,21 +84,19 @@ class RespuestaFinanciera(BaseModel):
     fondo_emergencia_valor: int
     recomendacion: str
     mensaje: str
+    endeudamiento_activo: bool
 
-# =============== FUNCIONES AUXILIARES ===============
 def obtener_recomendacion_ia(salario: int, nivel_riesgo: str, objetivo: str, horizonte: str, fondo_emergencia: bool) -> str:
-    """Consulta Ollama para obtener recomendación personalizada"""
     try:
         prompt = f"""
-        Cliente con salario: ${salario:,} COP
+        Cliente con salario: {salario} COP
         Nivel de riesgo: {nivel_riesgo}
         Objetivo financiero: {objetivo}
         Horizonte: {horizonte}
         Fondo de emergencia incluido: {'sí' if fondo_emergencia else 'no'}
         
-        Proporciona una recomendación de inversión en 2-3 párrafos basada en esta información.
+        Proporciona una recomendación de inversión en 2-3 párrafos basada en esta información. Escribe todos los valores numéricos sin puntos ni comas de miles.
         """
-        
         response = chat(
             model=MODEL,
             messages=[
@@ -113,7 +109,6 @@ def obtener_recomendacion_ia(salario: int, nivel_riesgo: str, objetivo: str, hor
     except Exception as e:
         return f"Error al generar recomendación: {str(e)}"
 
-
 def generar_mensaje(resultado: dict) -> str:
     perfil = resultado["perfil"]
     ahorro = perfil["ahorro_inversion"]
@@ -122,38 +117,31 @@ def generar_mensaje(resultado: dict) -> str:
     emergencia_valor = resultado["fondo_emergencia"]
     objetivo = perfil.get("objetivo_financiero", "mejorar mis finanzas")
     horizonte = perfil.get("horizonte", "plazo medio")
+    
     mensaje = (
-        f"Con un salario mensual de ${perfil['salario']:,} COP y un nivel de riesgo {perfil['nivel_riesgo']}, "
-        f"te recomendamos destinar {necesidades:,} COP a necesidades, {deseos:,} COP a deseos y {ahorro:,} COP al ahorro/inversión. "
+        f"Con un salario mensual de {perfil['salario']} COP y un nivel de riesgo {perfil['nivel_riesgo']}, "
+        f"te recomendamos destinar {necesidades} COP a necesidades, {deseos} COP a deseos y {ahorro} COP al ahorro/inversión. "
         f"Tu objetivo es {objetivo} con un horizonte {horizonte}."
     )
 
     if perfil["fondo_emergencia_meses"] > 0:
-        mensaje += (
-            f" Además, se sugiere un fondo de emergencia equivalente a {perfil['fondo_emergencia_meses']} meses "
-            f"de necesidades: {emergencia_valor:,} COP."
-        )
+        mensaje += f" Además, se sugiere un fondo de emergencia equivalente a {perfil['fondo_emergencia_meses']} meses de necesidades: {emergencia_valor} COP."
     else:
         mensaje += " Has indicado que no deseas priorizar un fondo de emergencia en este momento."
 
-    mensaje += "\n\nEl portafolio óptimo sugerido combina productos diversificados para equilibrar rentabilidad y riesgo." \
-               f" Se espera que el ahorro proyectado después de un año sea aproximadamente {resultado['valor_proyectado']:,} COP."
+    mensaje += f"\n\nEl portafolio óptimo sugerido combina productos diversificados para equilibrar rentabilidad y riesgo. Se espera que el ahorro proyectado después de un año sea aproximadamente {resultado['valor_proyectado']} COP."
     return mensaje
 
-# =============== ENDPOINTS ===============
 @app.get("/")
 def root():
-    """Health check"""
     return {"mensaje": "Asistente Financiero API activa"}
 
 @app.post("/analizar", response_model=RespuestaFinanciera)
 def analizar_finanzas(consulta: ConsultaFinanciera):
-    """Analiza perfil financiero usando lógica evolutiva"""
     try:
         salario = consulta.salario
         riesgo = consulta.nivel_riesgo.capitalize()
         
-        # Validaciones
         if salario <= 0:
             raise HTTPException(status_code=400, detail="Salario debe ser mayor a 0")
         if riesgo not in ["Bajo", "Medio", "Alto"]:
@@ -167,10 +155,8 @@ def analizar_finanzas(consulta: ConsultaFinanciera):
             "fondo_emergencia": consulta.fondo_emergencia,
         }
 
-        # Obtener análisis con el algoritmo evolutivo
         resultado = optimizar_perfil(perfil_input)
         
-        # Obtener recomendación de IA
         recomendacion = obtener_recomendacion_ia(
             salario,
             riesgo,
@@ -181,9 +167,11 @@ def analizar_finanzas(consulta: ConsultaFinanciera):
         
         return RespuestaFinanciera(
             salario=resultado["perfil"]["salario"],
-            nivel_riesgo=resultado["perfil"]["nivel_riesgo"],
-            objetivo_financiero=resultado["perfil"].get("objetivo_financiero", perfil_input["objetivo_financiero"]),
+            gastos_fijos=consulta.gastos_fijos,
+            deudas=consulta.deudas,
+            riesgo=resultado["perfil"]["nivel_riesgo"],
             horizonte=resultado["perfil"].get("horizonte", perfil_input["horizonte"]),
+            objetivo_financiero=resultado["perfil"].get("objetivo_financiero", perfil_input["objetivo_financiero"]),
             fondo_emergencia=resultado["perfil"].get("fondo_emergencia", perfil_input["fondo_emergencia"]),
             ahorro_inversion=resultado["perfil"]["ahorro_inversion"],
             necesidades=resultado["perfil"]["necesidades"],
@@ -193,14 +181,14 @@ def analizar_finanzas(consulta: ConsultaFinanciera):
             valor_proyectado=resultado["valor_proyectado"],
             fondo_emergencia_valor=resultado["fondo_emergencia"],
             recomendacion=recomendacion,
-            mensaje=generar_mensaje(resultado)
+            mensaje=generar_mensaje(resultado),
+            endeudamiento_activo=consulta.endeudamiento
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/catalogo")
 def obtener_catalogo_inversiones():
-    """Obtiene catálogo completo de inversiones"""
     try:
         catalogo = cargar_catalogo()
         if not catalogo:
@@ -211,7 +199,6 @@ def obtener_catalogo_inversiones():
 
 @app.get("/health")
 def health_check():
-    """Verifica estado de conexión con Ollama"""
     try:
         response = chat(
             model=MODEL,
@@ -222,17 +209,14 @@ def health_check():
     except Exception as e:
         return {"status": "ERROR", "detalle": str(e)}
 
-
 @app.post("/analisis-inteligente")
 def analisis_inteligente_route(payload: dict):
-    """Ruta modular: análisis inteligente sin tocar /analizar existente."""
     try:
         resultado = generar_analisis_inteligente(payload)
         return resultado
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-# =============== EJECUTAR ===============
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)

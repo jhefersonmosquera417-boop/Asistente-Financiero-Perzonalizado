@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
-import { analisisInteligente } from '../api/finanzas'
+
+import { optimizarPortafolioEvolutivo } from '../api/finanzas'
 import './AsistenteFinancieroInteligente.css'
 
 const pasos = ['Ingresos', 'Perfil de riesgo', 'Objetivos', 'Confirmación']
@@ -85,22 +86,28 @@ function AsistenteFinancieroInteligente({ onBack, onComplete }) {
     setStep((prev) => Math.max(prev - 1, 0))
   }
 
+  // 🚨 CAMBIO 2: Modificamos la función para disparar el Algoritmo Genético real
   const enviarAnalisis = async () => {
     setError('')
     setLoading(true)
 
     try {
-      const response = await analisisInteligente({
+      // Mapeo riguroso según la clase ConsultaFinanciera del main.py de tu backend
+      const payload = {
         salario: salarioNumber,
-        gastos_fijos: gastosFijosNumber,
-        deudas: deudasNumber,
-        riesgo,
-        objetivos,
-        horizonte: `${horizonteLabel} (${horizonte} años)`,
-      })
+        nivel_riesgo: riesgo, // 'Bajo', 'Medio', 'Alto'
+        objetivo_financiero: objetivos.join(', '), // String plano requerido por Python
+        horizonte: horizonteLabel, // 'Corto plazo', 'Mediano plazo', 'Largo plazo'
+        fondo_emergencia: objetivos.includes('Fondo de emergencia') // Determina dinámicamente si se calcula o no
+      }
+
+      // Llamada directa al endpoint /analizar de FastAPI
+      const response = await optimizarPortafolioEvolutivo(payload)
+      
+      // onComplete enviará la estructura de tipo RespuestaFinanciera al Dashboard principal
       onComplete(response)
     } catch (err) {
-      setError(err.message)
+      setError(err.message || 'Error conectando con el motor genético Python.')
     } finally {
       setLoading(false)
     }
@@ -272,7 +279,7 @@ function AsistenteFinancieroInteligente({ onBack, onComplete }) {
         </button>
         {step === pasos.length - 1 ? (
           <button className="primary-button" onClick={enviarAnalisis} disabled={loading}>
-            {loading ? 'Analizando...' : 'Ejecutar análisis'}
+            {loading ? 'Calculando Portafolio de Inversión...' : 'Ejecutar análisis'}
           </button>
         ) : (
           <button className="primary-button" onClick={avanzarPaso}>
@@ -283,7 +290,7 @@ function AsistenteFinancieroInteligente({ onBack, onComplete }) {
     )
   }
 
- return (
+  return (
     <div className="assistant-shell">
       <div className="assistant-panel">
         <header className="assistant-header">
