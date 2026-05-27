@@ -192,6 +192,7 @@
   display: flex;
   align-items: center;
   gap: 18px;
+  color: #cbd5e1;
 }
 
 .slider-row input[type='range'] {

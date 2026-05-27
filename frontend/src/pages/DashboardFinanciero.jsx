@@ -22,17 +22,50 @@ function DashboardFinanciero({ data, onBack }) {
   const [activeTab, setActiveTab] = useState('Tu Portafolio')
   const [showJson, setShowJson] = useState(false)
 
+  // 🔍 DEBUG: ver exactamente qué llega del backend (puedes quitarlo luego)
+  console.log('[DEBUG] data recibida:', {
+    nivel_riesgo: data?.nivel_riesgo,
+    horizonte: data?.horizonte,
+    fondo_emergencia: data?.fondo_emergencia,
+    salario: data?.salario,
+  })
+
   const datosPerfil = useMemo(() => {
-    const horizonString = data?.horizonte || '2 años'
-    const horizonMatch = horizonString.match(/(\d+)\s*años?/) || []
-    const horizonte_anos = Number(horizonMatch[1]) || 2
+    const horizonString = data?.horizonte || ''
+
+    // Extraer número de años si viene en el string
+    const matchAnos = horizonString.match(/(\d+)\s*años?/)
+    const inferirAnos = (str) => {
+      const s = str.toLowerCase()
+      if (s.includes('corto'))   return 2
+      if (s.includes('mediano')) return 5
+      if (s.includes('largo'))   return 10
+      return 2
+    }
+    const horizonte_anos = matchAnos ? Number(matchAnos[1]) : inferirAnos(horizonString)
+
+    // Etiqueta legible: "Mediano plazo (5 años)"
+    const tienePlazo = horizonString.toLowerCase().includes('plazo')
+    const etiquetaPlazo = tienePlazo
+      ? `${horizonString} (${horizonte_anos} años)`
+      : horizonString
+        ? `${horizonString} (${horizonte_anos} años)`
+        : `Corto plazo (${horizonte_anos} años)`
+
+    // Normalizar riesgo → "Bajo" / "Medio" / "Alto"
+    // Usa mapa explícito para cubrir cualquier variante que envíe el backend
+    const riesgoRaw = (data?.nivel_riesgo || '').toLowerCase().trim()
+    const riesgoMap = { bajo: 'Bajo', medio: 'Medio', alta: 'Alto', alto: 'Alto', medium: 'Medio', low: 'Bajo', high: 'Alto' }
+    const riesgoNorm = riesgoMap[riesgoRaw] || (riesgoRaw ? riesgoRaw.charAt(0).toUpperCase() + riesgoRaw.slice(1) : 'Bajo')
+
     return {
-      salario: data?.salario || 0,
-      riesgo: data?.nivel_riesgo || 'Bajo',
-      horizonte: data?.horizonte || 'Corto plazo (2 años)',
-      ahorro_inversion: data?.ahorro_inversion || 0,
+      salario:          data?.salario             || 0,
+      riesgo:           riesgoNorm,
+      horizonte:        etiquetaPlazo,
       horizonte_anos,
-      objetivo: data?.objetivo_financiero || 'Fondo de emergencia',
+      ahorro_inversion: data?.ahorro_inversion    || 0,
+      objetivo:         data?.objetivo_financiero || 'Fondo de emergencia',
+      fondo_emergencia: data?.fondo_emergencia === true || data?.fondo_emergencia === 'true',
     }
   }, [data])
 
@@ -202,7 +235,7 @@ function DashboardFinanciero({ data, onBack }) {
                   { label: 'Salario mensual', value: `${(datosPerfil.salario).toLocaleString('es-CO')} COP`, icon: '💰' },
                   { label: 'Nivel de riesgo',  value: datosPerfil.riesgo, icon: '📊' },
                   { label: 'Horizonte',         value: datosPerfil.horizonte, icon: '🗓️' },
-                  { label: 'Fondo emergencia',  value: data?.fondo_emergencia ? 'Incluido ✓' : 'No incluido', icon: '🆘' },
+                  { label: 'Fondo emergencia',  value: datosPerfil.fondo_emergencia ? '✅ Incluido' : '❌ No incluido', icon: '🆘' },
                 ].map((row, i) => (
                   <div key={i} style={{
                     display: 'flex', justifyContent: 'space-between', alignItems: 'center',
@@ -212,7 +245,12 @@ function DashboardFinanciero({ data, onBack }) {
                     <span style={{ color: '#64748b', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
                       <span>{row.icon}</span>{row.label}
                     </span>
-                    <span style={{ color: '#cbd5e1', fontWeight: '500', fontSize: '0.85rem', textAlign: 'right', maxWidth: '55%' }}>
+                    <span style={{
+                      color: row.label === 'Fondo emergencia'
+                        ? (datosPerfil.fondo_emergencia ? '#22c55e' : '#64748b')
+                        : '#cbd5e1',
+                      fontWeight: '500', fontSize: '0.85rem', textAlign: 'right', maxWidth: '55%'
+                    }}>
                       {row.value}
                     </span>
                   </div>
